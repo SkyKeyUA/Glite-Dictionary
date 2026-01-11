@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Glite Dictionary">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/home.css">
+	<title>Glite Dictionary</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo header__logo--contain">
+					<a href="#">
+						<img src="img/logo.png" alt="Glite Dictionary">
+					</a>
+				</div>
+				<div class="header__input header__input--contain">
+					<label for="header-search">
+						<img src="img/icons/search.svg" alt="Search Icon">
+					</label>
+					<input type="search" id="header-search" name="header-search" placeholder="Search words or phrases..." />
+				</div>
+				<div class="header__dark-light-mode dark-light-mode">
+					<button type="button" aria-label="Light Mode" class="dark-light-mode__sun">
+						<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M7.33333 9.33333C7.88889 9.33333 8.36111 9.13889 8.75 8.75C9.13889 8.36111 9.33333 7.88889 9.33333 7.33333C9.33333 6.77778 9.13889 6.30556 8.75 5.91667C8.36111 5.52778 7.88889 5.33333 7.33333 5.33333C6.77778 5.33333 6.30556 5.52778 5.91667 5.91667C5.52778 6.30556 5.33333 6.77778 5.33333 7.33333C5.33333 7.88889 5.52778 8.36111 5.91667 8.75C6.30556 9.13889 6.77778 9.33333 7.33333 9.33333ZM7.33333 10.6667C6.41111 10.6667 5.625 10.3417 4.975 9.69167C4.325 9.04167 4 8.25556 4 7.33333C4 6.41111 4.325 5.625 4.975 4.975C5.625 4.325 6.41111 4 7.33333 4C8.25556 4 9.04167 4.325 9.69167 4.975C10.3417 5.625 10.6667 6.41111 10.6667 7.33333C10.6667 8.25556 10.3417 9.04167 9.69167 9.69167C9.04167 10.3417 8.25556 10.6667 7.33333 10.6667ZM2.66667 8H0V6.66667H2.66667V8ZM14.6667 8H12V6.66667H14.6667V8ZM6.66667 2.66667V0H8V2.66667H6.66667ZM6.66667 14.6667V12H8V14.6667H6.66667ZM3.6 4.5L1.91667 2.88333L2.86667 1.9L4.46667 3.56667L3.6 4.5ZM11.8 12.7667L10.1833 11.0833L11.0667 10.1667L12.75 11.7833L11.8 12.7667ZM10.1667 3.6L11.7833 1.91667L12.7667 2.86667L11.1 4.46667L10.1667 3.6ZM1.9 11.8L3.58333 10.1833L4.5 11.0667L2.88333 12.75L1.9 11.8Z" />
+						</svg>
+					</button>
+					<button type="button" aria-label="Dark Mode" class="dark-light-mode__moon">
+						<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M6 12C4.33333 12 2.91667 11.4167 1.75 10.25C0.583333 9.08333 0 7.66667 0 6C0 4.33333 0.583333 2.91667 1.75 1.75C2.91667 0.583333 4.33333 0 6 0C6.15556 0 6.30833 0.00555556 6.45833 0.0166667C6.60833 0.0277778 6.75556 0.0444444 6.9 0.0666667C6.44444 0.388889 6.08056 0.808333 5.80833 1.325C5.53611 1.84167 5.4 2.4 5.4 3C5.4 4 5.75 4.85 6.45 5.55C7.15 6.25 8 6.6 9 6.6C9.61111 6.6 10.1722 6.46389 10.6833 6.19167C11.1944 5.91945 11.6111 5.55556 11.9333 5.1C11.9556 5.24444 11.9722 5.39167 11.9833 5.54167C11.9944 5.69167 12 5.84444 12 6C12 7.66667 11.4167 9.08333 10.25 10.25C9.08333 11.4167 7.66667 12 6 12ZM6 10.6667C6.97778 10.6667 7.85556 10.3972 8.63333 9.85833C9.41111 9.31944 9.97778 8.61667 10.3333 7.75C10.1111 7.80556 9.88889 7.85 9.66667 7.88333C9.44444 7.91667 9.22222 7.93333 9 7.93333C7.63333 7.93333 6.46944 7.45278 5.50833 6.49167C4.54722 5.53056 4.06667 4.36667 4.06667 3C4.06667 2.77778 4.08333 2.55556 4.11667 2.33333C4.15 2.11111 4.19444 1.88889 4.25 1.66667C3.38333 2.02222 2.68056 2.58889 2.14167 3.36667C1.60278 4.14444 1.33333 5.02222 1.33333 6C1.33333 7.28889 1.78889 8.38889 2.7 9.3C3.61111 10.2111 4.71111 10.6667 6 10.6667Z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__home-hero home-hero">
+				<div class="home-hero__container">
+					<aside class="home-hero__aside">
+						<section class="home-hero__meanings meanings">
+							<ul class="meanings__list">
+								<li class="meanings__card-meanings card-meanings">
+									<article>
+										<div class="card-meanings__header active">
+											<h2 class="card-meanings__title">Key Meanings</h2>
+											<button type="button" aria-label="Collapse"></button>
+										</div>
+										<ul class="card-meanings__list">
+											<li class="active">
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/person.png" alt="person icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>To move quickly</h3>
+														<div class="card-meanings__text">
+															<p>To run fast</p>
+															<p>noun</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">300/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--green"></span>
+															<span class="card-meanings__value">1.0</span>
+														</div>
+													</div>
+												</article>
+											</li>
+											<li>
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/person.png" alt="person icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>A race</h3>
+														<div class="card-meanings__text">
+															<p>A charity run</p>
+															<p>noun</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">18/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--green"></span>
+															<span class="card-meanings__value">1.0</span>
+														</div>
+													</div>
+												</article>
+											</li>
+											<li>
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/case.png" alt="case icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>To manage</h3>
+														<div class="card-meanings__text">
+															<p>A charity run</p>
+															<p>verb</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">170/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--green"></span>
+															<span class="card-meanings__value">2.5</span>
+														</div>
+													</div>
+												</article>
+											</li>
+											<li>
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/cog.png" alt="cog icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>To operate</h3>
+														<div class="card-meanings__text">
+															<p>To run a machine</p>
+															<p>verb</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">150/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--green"></span>
+															<span class="card-meanings__value">2.2</span>
+														</div>
+													</div>
+												</article>
+											</li>
+											<li>
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/warning.png" alt="warning icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>To face danger</h3>
+														<div class="card-meanings__text">
+															<p>To run a risk</p>
+															<p>verb</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">60/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--yellow"></span>
+															<span class="card-meanings__value">6.3</span>
+														</div>
+													</div>
+												</article>
+											</li>
+											<li>
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/microphone.png" alt="microphone icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>To be a candidate</h3>
+														<div class="card-meanings__text">
+															<p>To run for president</p>
+															<p>verb</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">50/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--green"></span>
+															<span class="card-meanings__value">3.0</span>
+														</div>
+													</div>
+												</article>
+											</li>
+											<li>
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/car.png" alt="car icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>To smuggle</h3>
+														<div class="card-meanings__text">
+															<p>To run drugs</p>
+															<p>verb</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">40/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--red"></span>
+															<span class="card-meanings__value">8.6</span>
+														</div>
+													</div>
+												</article>
+											</li>
+											<li>
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/train.png" alt="train icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>To travel (route)</h3>
+														<div class="card-meanings__text">
+															<p>The train runs daily</p>
+															<p>verb</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">30/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--green"></span>
+															<span class="card-meanings__value">2.7</span>
+														</div>
+													</div>
+												</article>
+											</li>
+											<li>
+												<article>
+													<div class="card-meanings__image card-meanings__image--contain">
+														<img src="img/meanings/refresh.png" alt="refresh icon">
+													</div>
+													<div class="card-meanings__content">
+														<h3>A series</h3>
+														<div class="card-meanings__text">
+															<p>A winning run</p>
+															<p>verb</p>
+														</div>
+													</div>
+													<div class="card-meanings__info">
+														<div class="card-meanings__rate">20/m</div>
+														<div class="card-meanings__level">
+															<span class="card-meanings__dot card-meanings__dot--green"></span>
+															<span class="card-meanings__value">3.7</span>
+														</div>
+													</div>
+												</article>
+											</li>
+										</ul>
+									</article>
+								</li>
+								<li class="meanings__card-meanings card-meanings">
+									<article>
+										<div class="card-meanings__header">
+											<h2 class="card-meanings__title">Rare & Specialized Meanings</h2>
+											<button type="button" aria-label="Collapse"></button>
+										</div>
+										<ul class="card-meanings__list">
+										</ul>
+									</article>
+								</li>
+							</ul>
+						</section>
+					</aside>
+					<section class="home-hero__home-content home-content">
+						<div class="home-content__header-section header-section">
+							<h1 class="header-section__title">to run</h1>
+							<div class="header-section__info">
+								<div class="header-section__rate rate">18/m</div>
+								<div class="header-section__level level level--green">
+									<span class="level__dot level__dot--green"></span>
+									<span class="level__value">1.0</span>
+								</div>
+								<button type="button" aria-label="Add for Learning" class="header-section__learing">Add for
+									Learning</button>
+							</div>
+						</div>
+						<ul class="home-content__sounds sounds">
+							<li class="sounds__item">
+								<span class="sounds__language">uk</span>
+								<button class="sounds__btn" type="button" aria-label="play the sound">
+									<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
+											fill="#EBEBED" />
+										<path
+											d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
+											fill="#EBEBED" />
+										<path
+											d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
+											fill="#EBEBED" />
+									</svg>
+								</button>
+								<span class="sounds__transcription">/rʌn/</span>
+							</li>
+							<li class="sounds__item">
+								<span class="sounds__language">us</span>
+								<button class="sounds__btn" type="button" aria-label="play the sound">
+									<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
+											fill="#EBEBED" />
+										<path
+											d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
+											fill="#EBEBED" />
+										<path
+											d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
+											fill="#EBEBED" />
+									</svg>
+								</button>
+								<span class="sounds__transcription">/rʌn/</span>
+							</li>
+							<li class="sounds__item">
+								<span class="sounds__language">real speech (12)</span>
+								<button class="sounds__btn" type="button" aria-label="play the sound">
+									<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
+											fill="#EBEBED" />
+										<path
+											d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
+											fill="#EBEBED" />
+										<path
+											d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
+											fill="#EBEBED" />
+									</svg>
+								</button>
+							</li>
+						</ul>
+						<div class="home-content__verb verb">
+							<span>verb</span>
+							<span>Irregular verb: ran (past), run (past participle)</span>
+						</div>
+						<div class="home-content__sentence">To move a boat fast in the same direction as the wind</div>
+						<div class="home-content__example">
+							<span>example</span>
+							<p>During the race, she trained hard so she could run faster than her competitors.</p>
+						</div>
+						<div class="home-content__hero-swiper hero-swiper swiper">
+							<ul class="hero-swiper__swiper-wrapper swiper-wrapper">
+								<li class="hero-swiper__swiper-slide swiper-slide">
+									<div class="hero-swiper__iframe">
+										<iframe src="https://www.youtube.com/embed/DZN17YFIJnQ?si=IgROhSy5uvjov-k5">
+										</iframe>
+									</div>
+									<div class="hero-swiper__text">
+										<p>Our children shouldn't have to <strong>run</strong> bullets.</p>
+									</div>
+								</li>
+								<li class="hero-swiper__swiper-slide swiper-slide">
+									<div class="hero-swiper__iframe">
+										<iframe src="https://www.youtube.com/embed/DZN17YFIJnQ?si=IgROhSy5uvjov-k5">
+										</iframe>
+									</div>
+									<div class="hero-swiper__text">
+										<p>Our children shouldn't have to <strong>run</strong> bullets.</p>
+									</div>
+								</li>
+								<li class="hero-swiper__swiper-slide swiper-slide">
+									<div class="hero-swiper__iframe">
+										<iframe src="https://www.youtube.com/embed/DZN17YFIJnQ?si=IgROhSy5uvjov-k5">
+										</iframe>
+									</div>
+									<div class="hero-swiper__text">
+										<p>Our children shouldn't have to <strong>run</strong> bullets.</p>
+									</div>
+								</li>
+							</ul>
+							<div class="hero-swiper__swiper-actions swiper-actions">
+								<div class="swiper-actions__body">
+									<div class="swiper-actions__arrow swiper-actions__arrow--prev">
+										<svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M3.24294 0.243101C3.56707 -0.0810335 4.09263 -0.0810341 4.41677 0.243101C4.74021 0.567292 4.7397 1.09205 4.41579 1.41595L2.83278 2.99896H8.82985L8.91481 3.00287C9.33317 3.04554 9.65993 3.39942 9.65993 3.82904C9.6599 4.25863 9.33315 4.61254 8.91481 4.65521L8.82985 4.65912H2.83278L4.41677 6.24213C4.74065 6.56624 4.74071 7.09188 4.41677 7.41595C4.09269 7.74001 3.56708 7.73988 3.24294 7.41595L0.242938 4.41595L0.186298 4.35248C-0.0796754 4.0265 -0.0609084 3.54604 0.242938 3.24212L3.24294 0.243101Z"
+												fill="#EBEBED" />
+										</svg>
+
+									</div>
+									<div class="swiper-actions__pagination"></div>
+									<div class="swiper-actions__arrow swiper-actions__arrow--next">
+										<svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M5.24316 0.243095C5.5673 -0.0810286 6.09286 -0.0810345 6.41699 0.243095L9.41699 3.24309L9.47363 3.30657C9.7394 3.63255 9.72076 4.11308 9.41699 4.41692L6.41699 7.41595C6.09286 7.74008 5.5673 7.74008 5.24316 7.41595C4.91949 7.09177 4.92016 6.56708 5.24414 6.24309L6.82617 4.66009H0.830078L0.745117 4.65618C0.326635 4.61366 4.00356e-05 4.2597 0 3.83001C1.87839e-08 3.40028 0.326613 3.04637 0.745117 3.00384L0.830078 2.99993H6.82617L5.24316 1.41692C4.91905 1.09279 4.91906 0.567226 5.24316 0.243095Z"
+												fill="#EBEBED" />
+										</svg>
+
+									</div>
+								</div>
+								<div class="swiper-actions__action">
+									<div class="swiper-actions__text">Autoplay Next</div>
+									<div class="swiper-actions__autoplay"></div>
+								</div>
+							</div>
+						</div>
+						<div class="home-content__label">Examples</div>
+						<div class="home-content__examples-block examples-block">
+							<ul class="examples-block__tags">
+								<li><button class="active" type="button" aria-label="All">All</button></li>
+								<li><button type="button" aria-label="All">Movie</button></li>
+								<li><button type="button" aria-label="All">Books</button></li>
+								<li><button type="button" aria-label="All">Music Video</button></li>
+							</ul>
+							<ul class="examples-block__list">
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__text">
+											<p>During the race, she trained hard so she could <strong>run</strong> faster than her
+												competitors.</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__text">
+											<p>I didn't know what to do, so I just <strong>ran</strong> back as fast as I could.
+											</p>
+										</div>
+										<div class="examples-block__footer">
+											<div class="examples-block__icon">
+												<svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd"
+														d="M10.5738 0.0220347C11.114 -0.0927646 11.6454 0.252382 11.7603 0.792543L12.1246 2.50446C12.1816 2.77437 12.0087 3.03984 11.7388 3.09723L2.41167 5.07965H11.9039C12.1798 5.07989 12.4038 5.30369 12.4039 5.57965V11.0797C12.4036 11.6316 11.9558 12.0794 11.4039 12.0797H1.40386C0.85173 12.0797 0.404113 11.6317 0.403857 11.0797V5.07965L0.022021 3.28766C-0.0927433 2.74753 0.252446 2.21604 0.792529 2.10114L10.5738 0.0220347ZM2.25737 5.92926C2.17805 5.92926 2.13816 5.92954 2.10112 5.93512C1.98492 5.9527 1.87807 6.01103 1.80034 6.09918C1.77579 6.12716 1.75419 6.1609 1.71147 6.22711L1.55034 6.47711C1.42173 6.67646 1.35667 6.77656 1.33647 6.85504C1.27141 7.10912 1.41386 7.37063 1.66265 7.45368C1.73957 7.4793 1.85874 7.48004 2.09624 7.48004H3.29936C3.37856 7.48004 3.41863 7.47974 3.45561 7.47418C3.57167 7.45664 3.67771 7.39807 3.75542 7.31012C3.78015 7.28207 3.80238 7.24866 3.84526 7.18219L4.0064 6.93219C4.13487 6.73305 4.19992 6.63271 4.22026 6.55426C4.28553 6.30013 4.14289 6.03877 3.89409 5.95563C3.81717 5.93 3.69802 5.92926 3.4605 5.92926H2.25737ZM5.88237 5.92926C5.80305 5.92926 5.76316 5.92954 5.72612 5.93512C5.60992 5.9527 5.50307 6.01103 5.42534 6.09918C5.40079 6.12716 5.37919 6.1609 5.33647 6.22711L5.17534 6.47711C5.04673 6.67646 4.98167 6.77656 4.96147 6.85504C4.89641 7.10912 5.03886 7.37063 5.28765 7.45368C5.36457 7.4793 5.48374 7.48004 5.72124 7.48004H6.92436C7.00356 7.48004 7.04363 7.47974 7.08061 7.47418C7.19667 7.45664 7.30271 7.39807 7.38042 7.31012C7.40515 7.28207 7.42738 7.24866 7.47026 7.18219L7.6314 6.93219C7.75987 6.73305 7.82492 6.63271 7.84526 6.55426C7.91053 6.30013 7.76789 6.03877 7.51909 5.95563C7.44216 5.93 7.32302 5.92926 7.0855 5.92926H5.88237ZM9.50737 5.92926C9.42805 5.92926 9.38816 5.92954 9.35112 5.93512C9.23492 5.9527 9.12807 6.01103 9.05034 6.09918C9.02579 6.12716 9.00419 6.1609 8.96147 6.22711L8.80034 6.47711C8.67173 6.67646 8.60667 6.77656 8.58647 6.85504C8.52141 7.10912 8.66386 7.37063 8.91265 7.45368C8.98957 7.4793 9.10874 7.48004 9.34624 7.48004H10.5494C10.6286 7.48004 10.6686 7.47974 10.7056 7.47418C10.8217 7.45664 10.9277 7.39807 11.0054 7.31012C11.0302 7.28207 11.0524 7.24866 11.0953 7.18219L11.2564 6.93219C11.3849 6.73305 11.4499 6.63271 11.4703 6.55426C11.5355 6.30013 11.3929 6.03877 11.1441 5.95563C11.0672 5.93 10.948 5.92926 10.7105 5.92926H9.50737ZM3.41167 2.44293C3.33109 2.43389 3.21429 2.45898 2.98198 2.50836L1.80522 2.75836C1.7278 2.77482 1.68888 2.7833 1.65386 2.79645C1.54385 2.83781 1.4518 2.91671 1.39409 3.0191C1.37582 3.05161 1.36158 3.08896 1.33354 3.16266L1.2271 3.44098C1.14277 3.66264 1.10067 3.77408 1.09722 3.85504C1.0864 4.11708 1.27999 4.34308 1.54058 4.37262C1.62114 4.38169 1.738 4.35754 1.97026 4.30817L3.14702 4.05817C3.22439 4.04172 3.2634 4.03319 3.29839 4.02008C3.40836 3.9788 3.5004 3.8997 3.55815 3.79743C3.57653 3.76482 3.59053 3.72696 3.6187 3.65289L3.72515 3.37555C3.80936 3.15418 3.8514 3.04244 3.85503 2.96149C3.86604 2.69929 3.6724 2.47246 3.41167 2.44293ZM6.95757 1.69C6.87699 1.68096 6.76019 1.70508 6.52788 1.75446L5.35112 2.00446C5.27372 2.02091 5.23475 2.02943 5.19976 2.04254C5.08981 2.08387 4.9977 2.1629 4.93999 2.2652C4.92167 2.29779 4.90664 2.33568 4.87847 2.40973L4.773 2.68707C4.68876 2.9085 4.64665 3.0202 4.64311 3.10114C4.63229 3.36324 4.82579 3.59025 5.08647 3.61969C5.16703 3.62876 5.2839 3.60363 5.51616 3.55426L6.69194 3.30426C6.76953 3.28777 6.80924 3.2793 6.84429 3.26618C6.9542 3.22486 7.04633 3.14577 7.10405 3.04352C7.12235 3.011 7.13657 2.97365 7.1646 2.89996L7.27104 2.62164C7.35533 2.40008 7.39737 2.28855 7.40093 2.20758C7.41193 1.94545 7.21819 1.71962 6.95757 1.69ZM10.5025 0.936097C10.4219 0.92716 10.3057 0.951264 10.0738 1.00055L8.89702 1.25153C8.81978 1.26794 8.7806 1.27557 8.74565 1.28864C8.6358 1.32993 8.54361 1.40911 8.48589 1.51129C8.46756 1.54388 8.45254 1.58177 8.42437 1.65582L8.3189 1.93414C8.23458 2.15578 8.19241 2.26726 8.18901 2.34821C8.17834 2.61022 8.37173 2.8364 8.63237 2.86578C8.71289 2.87485 8.82906 2.84967 9.06108 2.80035L10.2378 2.55035C10.3154 2.53386 10.3551 2.5254 10.3902 2.51227C10.5 2.47094 10.5923 2.3918 10.65 2.28961C10.6682 2.25712 10.6825 2.21974 10.7105 2.14606L10.816 1.86774C10.9003 1.646 10.9433 1.53466 10.9468 1.45368C10.9578 1.19141 10.7633 0.965469 10.5025 0.936097Z"
+														fill="#FBFCFF" />
+												</svg>
+											</div>
+											<div class="examples-block__link">
+												<a href="#">Hell of a Summer (2023)</a>
+											</div>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__text">
+											<p>When the lights go out, <strong>run</strong> away with me.</p>
+										</div>
+										<div class="examples-block__footer">
+											<div class="examples-block__icon">
+												<svg width="15" height="11" viewBox="0 0 15 11" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd"
+														d="M7.40918 0C7.40918 0 12.0478 0.000155807 13.2002 0.314453C13.8382 0.485957 14.3432 0.990877 14.5146 1.62891C14.8288 2.79105 14.8379 5.2002 14.8379 5.2002C14.8379 5.22454 14.8361 7.62491 14.5234 8.77148C14.352 9.40946 13.8479 9.9144 13.21 10.0859C12.0608 10.3993 7.44518 10.4004 7.41895 10.4004C7.41895 10.4004 2.78035 10.4002 1.62793 10.0859C0.989901 9.91445 0.484894 9.40954 0.313477 8.77148C0.000822186 7.61539 8.09305e-06 5.22449 0 5.2002C0 5.2002 -8.56519e-05 2.79012 0.304688 1.6377C0.476186 0.999855 0.980319 0.494729 1.61816 0.323242C2.76707 0.00990522 7.381 6.07733e-05 7.40918 0ZM5.93262 7.42871L9.78125 5.2002L5.93262 2.97168V7.42871Z"
+														fill="#FBFCFF" />
+												</svg>
+											</div>
+											<div class="examples-block__link">
+												<a href="#">Channel: Edward Avila</a>
+											</div>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<div class="examples-block__show"><button type="button" aria-label="show all">Show all</button>
+								</div>
+							</ul>
+						</div>
+					</section>
+					<aside class="home-hero__panel panel">
+						<section class="panel__section">
+							<div class="panel__image panel__image--contain">
+								<img src="img/panel/1.jpg" alt="runner">
+							</div>
+							<div class="panel__footer">
+								<h3>To run</h3>
+								<button type="button" aria-label="Add"></button>
+							</div>
+						</section>
+					</aside>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<ul class="footer__title">
+						<li>Glite Dictionary</li>
+						<li>Glite Vocabulary Test</li>
+						<li>Glite Image Test</li>
+					</ul>
+					<ul class="footer__list">
+						<li><a href="#">Help</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Copyright © Glite Tech Ltd, 2024</a></li>
+					</ul>
+				</div>
+				<div class="footer__image footer__image--contain">
+					<div class="footer__qr">
+						<img src="img/icons/qr.svg" alt="QR code">
+					</div>
+					<div class="footer__body">
+						<div class="footer__logo">
+							<img src="img/footer-logo.svg" alt="Glite logo">
+						</div>
+						<div class="footer__text">
+							<p>The English Learning App for Intermediate & Advanced Learners</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

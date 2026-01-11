@@ -1,0 +1,104 @@
+:root {
+  /* fonts */
+  --font-family: 'Open Sans', sans-serif;
+
+  /* global */
+
+  --primary-text-color: #ebebed;
+  --primary-background-color: #1e1f22;
+
+  /* === Grayscale === */
+  --gray-800: #36383d;
+  --gray-700: #4e5058;
+  --gray-600: #666973;
+  --gray-500: #7e828e;
+  --gray-400: #9a9da5;
+  --gray-300: #b5b7b9;
+  --gray-200: #d0d1d5;
+  --gray-150: #d9d9d9;
+  --gray-50: #ffffff;
+
+  /* === Overlays === */
+  --overlay-gray-10: #fbfcff1a;
+  --overlay-gray-60: #f3f4f999;
+
+  /* === Primary (Blue) === */
+  --primary-300: #7fc3ff;
+  --primary-500: #2c7fff;
+  --primary-600: #165dfb;
+  --primary-650: #0a63f8;
+  --primary-700: #1447e6;
+
+  /* === Meanings === */
+  --meanings-card-background: #2b2d30;
+  --meanings-card-background-active: #36383d;
+  --meanings-title: #fbfcff;
+  --meanings-card-text: #7e828e;
+  --meanings-card-rate-bg: #ffffff0d;
+  --meanings-plus-minus: #f5f5f5;
+  --meanings-border: #404244;
+
+  /* === Panel === */
+
+  --panel-plus-minus: #f8f8f9;
+
+  /* === Status colors === */
+  --success-500: #32b935;
+  --warning-500: #ffbf1a;
+  --error-500: #d93233;
+
+  /* === header === */
+  --header-background: #1e1f22;
+  --header-input-text: #ffffff;
+
+  /* === footer === */
+  --footer-background: #1e1f22;
+  --footer-title-color: #ffffff;
+  --footer-text-color: #7e828e;
+
+  /* === swiper === */
+  --swiper-bg: #292a2d;
+  --swiper-arrow-bg: #36383d;
+  --swiper-arrow-bg-hover: #ffffff1a;
+
+  /* === examples === */
+
+  --examples-tags-bg: #343538;
+  --examples-tags-color-active: #fbfcff;
+  --examples-border-bg: #fbfcff1a;
+  --examples-image: #fafbff66;
+  --examples-button: #0000000d;
+
+  /* === Light / dark mode === */
+  --sun-color: #7e828e;
+  --moon-color: #1d1b20;
+
+  --hover-icon: brightness(0) invert(28%) sepia(78%) saturate(3802%) hue-rotate(236deg)
+    brightness(98%) contrast(97%);
+  --img-filter: brightness(0) invert(1);
+
+  --container-padding-inline: 1rem;
+  --global-max-width: 100rem; /* 1600/16 */
+}
+.light-mode {
+  --sun-color: #1d1b20;
+  --moon-color: #7e828e;
+  --primary-background-color: #ebebed;
+  --primary-text-color: #2b2d30;
+
+  --meanings-title: #2b2d30;
+  --meanings-card-background: #f8f8f9;
+  --swiper-arrow-bg: #0000000d;
+  --swiper-arrow-bg-hover: #d4d4d6;
+  --meanings-card-background-active: #f3f3f3;
+  --meanings-plus-minus: #2b2d30;
+  --meanings-border: #e0e0e1;
+  --meanings-card-rate-bg: #0000000d;
+
+  --swiper-bg: #f8f8f9;
+
+  --examples-tags-bg: #ebebed;
+  --examples-border-bg: #0000001a;
+  --examples-tags-color-active: #ebebed;
+  --examples-image: #7e828e;
+}
