@@ -58,7 +58,7 @@
 
   /* === swiper === */
   --swiper-bg: #292a2d;
-  --swiper-arrow-bg: #36383d;
+  --swiper-arrow-bg: #ffffff0d;
   --swiper-arrow-bg-hover: #ffffff1a;
 
   /* === examples === */
@@ -68,6 +68,13 @@
   --examples-border-bg: #fbfcff1a;
   --examples-image: #fafbff66;
   --examples-button: #0000000d;
+
+  /* === fast === */
+  --fast-line: #4e5058;
+
+  /* === speed === */
+  --speed-mark-bg: #ffffff;
+  --speed-mark-border: #27282b;
 
   /* === Light / dark mode === */
   --sun-color: #7e828e;
@@ -89,7 +96,7 @@
   --meanings-title: #2b2d30;
   --meanings-card-background: #f8f8f9;
   --swiper-arrow-bg: #0000000d;
-  --swiper-arrow-bg-hover: #d4d4d6;
+  --swiper-arrow-bg-hover: #0000001a;
   --meanings-card-background-active: #f3f3f3;
   --meanings-plus-minus: #2b2d30;
   --meanings-border: #e0e0e1;
@@ -101,4 +108,9 @@
   --examples-border-bg: #0000001a;
   --examples-tags-color-active: #ebebed;
   --examples-image: #7e828e;
+
+  --speed-mark-bg: #27282b;
+  --speed-mark-border: #ffffff;
+
+  --fast-line: #0000000d;
 }

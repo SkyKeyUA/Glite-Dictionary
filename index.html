@@ -49,7 +49,7 @@
 			<div class="main__home-hero home-hero">
 				<div class="home-hero__container">
 					<aside class="home-hero__aside">
-						<section class="home-hero__meanings meanings">
+						<div class="home-hero__meanings meanings">
 							<ul class="meanings__list">
 								<li class="meanings__card-meanings card-meanings">
 									<article>
@@ -261,82 +261,84 @@
 									</article>
 								</li>
 							</ul>
-						</section>
+						</div>
 					</aside>
-					<section class="home-hero__home-content home-content">
-						<div class="home-content__header-section header-section">
-							<h1 class="header-section__title">to run</h1>
-							<div class="header-section__info">
-								<div class="header-section__rate rate">18/m</div>
-								<div class="header-section__level level level--green">
-									<span class="level__dot level__dot--green"></span>
-									<span class="level__value">1.0</span>
+					<div class="home-hero__home-content home-content">
+						<section class="home-content__section home-content__section--margin-bottom">
+							<div class="home-content__header-section header-section">
+								<h1 class="header-section__title">to run</h1>
+								<div class="header-section__info">
+									<div class="header-section__rate rate">18/m</div>
+									<div class="header-section__level level level--green">
+										<span class="level__dot level__dot--green"></span>
+										<span class="level__value">1.0</span>
+									</div>
+									<button type="button" aria-label="Add for Learning" class="header-section__learing">Add for
+										Learning</button>
 								</div>
-								<button type="button" aria-label="Add for Learning" class="header-section__learing">Add for
-									Learning</button>
 							</div>
-						</div>
-						<ul class="home-content__sounds sounds">
-							<li class="sounds__item">
-								<span class="sounds__language">uk</span>
-								<button class="sounds__btn" type="button" aria-label="play the sound">
-									<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd"
-											d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
-											fill="#EBEBED" />
-										<path
-											d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
-											fill="#EBEBED" />
-										<path
-											d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
-											fill="#EBEBED" />
-									</svg>
-								</button>
-								<span class="sounds__transcription">/rʌn/</span>
-							</li>
-							<li class="sounds__item">
-								<span class="sounds__language">us</span>
-								<button class="sounds__btn" type="button" aria-label="play the sound">
-									<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd"
-											d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
-											fill="#EBEBED" />
-										<path
-											d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
-											fill="#EBEBED" />
-										<path
-											d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
-											fill="#EBEBED" />
-									</svg>
-								</button>
-								<span class="sounds__transcription">/rʌn/</span>
-							</li>
-							<li class="sounds__item">
-								<span class="sounds__language">real speech (12)</span>
-								<button class="sounds__btn" type="button" aria-label="play the sound">
-									<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd"
-											d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
-											fill="#EBEBED" />
-										<path
-											d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
-											fill="#EBEBED" />
-										<path
-											d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
-											fill="#EBEBED" />
-									</svg>
-								</button>
-							</li>
-						</ul>
-						<div class="home-content__verb verb">
-							<span>verb</span>
-							<span>Irregular verb: ran (past), run (past participle)</span>
-						</div>
-						<div class="home-content__sentence">To move a boat fast in the same direction as the wind</div>
-						<div class="home-content__example">
-							<span>example</span>
-							<p>During the race, she trained hard so she could run faster than her competitors.</p>
-						</div>
+							<ul class="home-content__sounds sounds">
+								<li class="sounds__item">
+									<span class="sounds__language">uk</span>
+									<button class="sounds__btn" type="button" aria-label="play the sound">
+										<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
+												fill="#EBEBED" />
+											<path
+												d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
+												fill="#EBEBED" />
+											<path
+												d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
+												fill="#EBEBED" />
+										</svg>
+									</button>
+									<span class="sounds__transcription">/rʌn/</span>
+								</li>
+								<li class="sounds__item">
+									<span class="sounds__language">us</span>
+									<button class="sounds__btn" type="button" aria-label="play the sound">
+										<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
+												fill="#EBEBED" />
+											<path
+												d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
+												fill="#EBEBED" />
+											<path
+												d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
+												fill="#EBEBED" />
+										</svg>
+									</button>
+									<span class="sounds__transcription">/rʌn/</span>
+								</li>
+								<li class="sounds__item">
+									<span class="sounds__language">real speech (12)</span>
+									<button class="sounds__btn" type="button" aria-label="play the sound">
+										<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
+												fill="#EBEBED" />
+											<path
+												d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
+												fill="#EBEBED" />
+											<path
+												d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
+												fill="#EBEBED" />
+										</svg>
+									</button>
+								</li>
+							</ul>
+							<div class="home-content__verb verb">
+								<span>verb</span>
+								<span>Irregular verb: ran (past), run (past participle)</span>
+							</div>
+							<div class="home-content__sentence">To move a boat fast in the same direction as the wind</div>
+							<div class="home-content__example">
+								<span>example</span>
+								<p>During the race, she trained hard so she could run faster than her competitors.</p>
+							</div>
+						</section>
 						<div class="home-content__hero-swiper hero-swiper swiper">
 							<ul class="hero-swiper__swiper-wrapper swiper-wrapper">
 								<li class="hero-swiper__swiper-slide swiper-slide">
@@ -391,12 +393,12 @@
 								</div>
 								<div class="swiper-actions__action">
 									<div class="swiper-actions__text">Autoplay Next</div>
-									<div class="swiper-actions__autoplay"></div>
+									<button type="button" aria-label="Autoplay" class="swiper-actions__autoplay"></button>
 								</div>
 							</div>
 						</div>
 						<div class="home-content__label">Examples</div>
-						<div class="home-content__examples-block examples-block">
+						<div class="home-content__examples-block examples-block examples-block--margin-bottom">
 							<ul class="examples-block__tags">
 								<li><button class="active" type="button" aria-label="All">All</button></li>
 								<li><button type="button" aria-label="All">Movie</button></li>
@@ -474,11 +476,368 @@
 										</div>
 									</div>
 								</li>
-								<div class="examples-block__show"><button type="button" aria-label="show all">Show all</button>
-								</div>
 							</ul>
+							<div class="examples-block__show"><button type="button" aria-label="show all">Show all</button>
+							</div>
 						</div>
-					</section>
+						<section class="home-content__fast fast fast--margin-bottom">
+							<h2 class="fast__title">How Fast</h2>
+							<div class="fast__body">
+								<div class="fast__speed-side speed-side">
+									<span class="speed-side__marker"></span>
+								</div>
+								<div class="fast__content">
+									<div class="fast__row">
+										<div class="fast__label">sprint</div>
+										<div class="fast__info">
+											<div class="fast__rate rate">100/m</div>
+											<div class="fast__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
+										</div>
+									</div>
+									<div class="fast__line">
+										<div class="fast__arrow">
+											<svg width="8" height="10" viewBox="0 0 8 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M3.3065 0.186267C3.63248 -0.0796478 4.11296 -0.0609178 4.41685 0.242908L7.41588 3.24291C7.74001 3.56704 7.74001 4.0926 7.41588 4.41674C7.09169 4.74024 6.56695 4.73968 6.24302 4.41576L4.66002 2.83275V8.82982L4.65611 8.91478C4.61345 9.33311 4.25951 9.65984 3.82994 9.6599C3.40032 9.6599 3.04644 9.33314 3.00377 8.91478L2.99986 8.82982V2.83275L1.41685 4.41674C1.09276 4.74066 0.567119 4.74065 0.243024 4.41674C-0.0810523 4.09265 -0.0809635 3.56705 0.243024 3.24291L3.24302 0.242908L3.3065 0.186267Z"
+													fill="#4E5058" />
+											</svg>
+										</div>
+										<div class="fast__bg"></div>
+									</div>
+									<div class="fast__row">
+										<div class="fast__label">to run</div>
+										<div class="fast__info">
+											<div class="fast__rate rate">100/m</div>
+											<div class="fast__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
+										</div>
+									</div>
+									<div class="fast__line">
+										<div class="fast__arrow">
+											<svg width="8" height="10" viewBox="0 0 8 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M3.3065 0.186267C3.63248 -0.0796478 4.11296 -0.0609178 4.41685 0.242908L7.41588 3.24291C7.74001 3.56704 7.74001 4.0926 7.41588 4.41674C7.09169 4.74024 6.56695 4.73968 6.24302 4.41576L4.66002 2.83275V8.82982L4.65611 8.91478C4.61345 9.33311 4.25951 9.65984 3.82994 9.6599C3.40032 9.6599 3.04644 9.33314 3.00377 8.91478L2.99986 8.82982V2.83275L1.41685 4.41674C1.09276 4.74066 0.567119 4.74065 0.243024 4.41674C-0.0810523 4.09265 -0.0809635 3.56705 0.243024 3.24291L3.24302 0.242908L3.3065 0.186267Z"
+													fill="#4E5058" />
+											</svg>
+										</div>
+										<div class="fast__bg"></div>
+									</div>
+									<div class="fast__row">
+										<div class="fast__label">to jog</div>
+										<div class="fast__info">
+											<div class="fast__rate rate">100/m</div>
+											<div class="fast__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
+										</div>
+									</div>
+									<div class="fast__line">
+										<div class="fast__arrow">
+											<svg width="8" height="10" viewBox="0 0 8 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M3.3065 0.186267C3.63248 -0.0796478 4.11296 -0.0609178 4.41685 0.242908L7.41588 3.24291C7.74001 3.56704 7.74001 4.0926 7.41588 4.41674C7.09169 4.74024 6.56695 4.73968 6.24302 4.41576L4.66002 2.83275V8.82982L4.65611 8.91478C4.61345 9.33311 4.25951 9.65984 3.82994 9.6599C3.40032 9.6599 3.04644 9.33314 3.00377 8.91478L2.99986 8.82982V2.83275L1.41685 4.41674C1.09276 4.74066 0.567119 4.74065 0.243024 4.41674C-0.0810523 4.09265 -0.0809635 3.56705 0.243024 3.24291L3.24302 0.242908L3.3065 0.186267Z"
+													fill="#4E5058" />
+											</svg>
+										</div>
+										<div class="fast__bg"></div>
+									</div>
+									<div class="fast__row">
+										<div class="fast__label">to walk</div>
+										<div class="fast__info">
+											<div class="fast__rate rate">100/m</div>
+											<div class="fast__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
+										</div>
+									</div>
+									<div class="fast__line">
+										<div class="fast__arrow">
+											<svg width="8" height="10" viewBox="0 0 8 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M3.3065 0.186267C3.63248 -0.0796478 4.11296 -0.0609178 4.41685 0.242908L7.41588 3.24291C7.74001 3.56704 7.74001 4.0926 7.41588 4.41674C7.09169 4.74024 6.56695 4.73968 6.24302 4.41576L4.66002 2.83275V8.82982L4.65611 8.91478C4.61345 9.33311 4.25951 9.65984 3.82994 9.6599C3.40032 9.6599 3.04644 9.33314 3.00377 8.91478L2.99986 8.82982V2.83275L1.41685 4.41674C1.09276 4.74066 0.567119 4.74065 0.243024 4.41674C-0.0810523 4.09265 -0.0809635 3.56705 0.243024 3.24291L3.24302 0.242908L3.3065 0.186267Z"
+													fill="#4E5058" />
+											</svg>
+										</div>
+										<div class="fast__bg"></div>
+									</div>
+									<div class="fast__row">
+										<div class="fast__label">to crawl</div>
+										<div class="fast__info">
+											<div class="fast__rate rate">100/m</div>
+											<div class="fast__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="home-content__surface surface surface--margin-bottom">
+							<h2 class="surface__title">Surface Forms</h2>
+							<ul class="surface__list">
+								<li><strong>run</strong> - infinitive (base)</li>
+								<li><strong>runs</strong> - third person singular</li>
+								<li><strong>running</strong> - present participle</li>
+								<li><strong>ran</strong> - past (irregular)</li>
+								<li><strong>run</strong> - past participle (irregular)</li>
+							</ul>
+						</section>
+						<section class="home-content__examples-block examples-block examples-block--margin-bottom">
+							<h2 class="examples-block__title">Synonyms</h2>
+							<ul class="examples-block__list">
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label active">to escape</div>
+										<div class="examples-block__text">
+											<p>Get away from a place, danger, harm, or responsibility quickly</p>
+										</div>
+										<div class="examples-block__notification">run: is quick motion that may not carry the idea
+											of getting away</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">run away</div>
+										<div class="examples-block__text">
+											<p>Leave a place or person suddenly and secretly to avoid danger or control</p>
+										</div>
+										<div class="examples-block__notification">Leave a place or person suddenly and secretly to
+											avoid danger or control</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">to flee</div>
+										<div class="examples-block__text">
+											<p>Get away from a place quickly to avoid danger or harm</p>
+										</div>
+										<div class="examples-block__notification">run: is broader fast movement that may not
+											involve danger avoidance</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="examples-block__show"><button type="button" aria-label="show all">Show all</button>
+							</div>
+						</section>
+						<section class="home-content__examples-block examples-block examples-block--margin-bottom">
+							<h2 class="examples-block__title">Antonyms</h2>
+							<ul class="examples-block__list examples-block__list--border-none">
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">stand still</div>
+										<div class="examples-block__text">
+											<p>Stay upright in one place without moving</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</section>
+						<section class="home-content__examples-block examples-block examples-block--margin-bottom">
+							<h2 class="examples-block__title">Idioms</h2>
+							<ul class="examples-block__list">
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">run in the family</div>
+										<div class="examples-block__text">
+											<p>Something many members of the same family have</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">run for one's life</div>
+										<div class="examples-block__text">
+											<p>Leave a place or person suddenly and secretly to avoid danger or control</p>
+										</div>
+										<div class="examples-block__notification">Get away very quickly to avoid being hurt</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">in the short run</div>
+										<div class="examples-block__text">
+											<p>For a short time without thinking about long-term effects</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="examples-block__show"><button type="button" aria-label="show all">Show all</button>
+							</div>
+						</section>
+						<section class="home-content__examples-block examples-block examples-block--margin-bottom">
+							<h2 class="examples-block__title">Phrasal Verbs</h2>
+							<ul class="examples-block__list">
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">run out</div>
+										<div class="examples-block__text">
+											<p>Use all of something so none is left</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">run out</div>
+										<div class="examples-block__text">
+											<p>Stop being valid after a set time</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">run out</div>
+										<div class="examples-block__text">
+											<p>Leave a place suddenly, often to avoid someone or something</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="examples-block__show"><button type="button" aria-label="show all">Show all</button>
+							</div>
+						</section>
+						<section class="home-content__examples-block examples-block examples-block--margin-bottom">
+							<h2 class="examples-block__title">Compounds</h2>
+							<ul class="examples-block__list">
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">long run</div>
+										<div class="examples-block__text">
+											<p>A long time when you see the final result of actions</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">home run</div>
+										<div class="examples-block__text">
+											<p>A hit that lets the batter run all the bases and score a run</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">home run</div>
+										<div class="examples-block__text">
+											<p>A very successful result that achieves its goal</p>
+										</div>
+									</div>
+									<div class="examples-block__info">
+										<div class="examples-block__rate rate">100/m</div>
+										<div class="examples-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">1.0</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="examples-block__show"><button type="button" aria-label="show all">Show all</button>
+							</div>
+						</section>
+						<section class="home-content__etymology etymology">
+							<h2 class="etymology__title">Etymology</h2>
+							<div class="etymology__text">
+								<p>run comes from an old word that meant 'move' or 'flow', so think of a person moving fast like
+									water moving down a hill;
+									that is why to run means to move quickly on foot.</p>
+							</div>
+						</section>
+					</div>
 					<aside class="home-hero__panel panel">
 						<section class="panel__section">
 							<div class="panel__image panel__image--contain">
@@ -492,41 +851,42 @@
 					</aside>
 				</div>
 			</div>
-		</main>
+	</div>
+	</main>
 
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__content">
-					<ul class="footer__title">
-						<li>Glite Dictionary</li>
-						<li>Glite Vocabulary Test</li>
-						<li>Glite Image Test</li>
-					</ul>
-					<ul class="footer__list">
-						<li><a href="#">Help</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Contact Us</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms of Use</a></li>
-						<li><a href="#">Copyright © Glite Tech Ltd, 2024</a></li>
-					</ul>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__content">
+				<ul class="footer__title">
+					<li>Glite Dictionary</li>
+					<li>Glite Vocabulary Test</li>
+					<li>Glite Image Test</li>
+				</ul>
+				<ul class="footer__list">
+					<li><a href="#">Help</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Copyright © Glite Tech Ltd, 2024</a></li>
+				</ul>
+			</div>
+			<div class="footer__image footer__image--contain">
+				<div class="footer__qr">
+					<img src="img/icons/qr.svg" alt="QR code">
 				</div>
-				<div class="footer__image footer__image--contain">
-					<div class="footer__qr">
-						<img src="img/icons/qr.svg" alt="QR code">
+				<div class="footer__body">
+					<div class="footer__logo">
+						<img src="img/footer-logo.svg" alt="Glite logo">
 					</div>
-					<div class="footer__body">
-						<div class="footer__logo">
-							<img src="img/footer-logo.svg" alt="Glite logo">
-						</div>
-						<div class="footer__text">
-							<p>The English Learning App for Intermediate & Advanced Learners</p>
-						</div>
+					<div class="footer__text">
+						<p>The English Learning App for Intermediate & Advanced Learners</p>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
