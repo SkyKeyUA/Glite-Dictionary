@@ -50,6 +50,8 @@
   /* === header === */
   --header-background: #1e1f22;
   --header-input-text: #ffffff;
+  --header-input-list: #ebebed;
+  --header-input-border: #ffffff1a;
 
   /* === footer === */
   --footer-background: #1e1f22;

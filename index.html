@@ -22,11 +22,63 @@
 						<img src="img/logo.png" alt="Glite Dictionary">
 					</a>
 				</div>
-				<div class="header__input header__input--contain">
-					<label for="header-search">
+				<div class="header__search-header search-header">
+					<div class="search-header__body">
+						<div class="search-header__input search-header__input--contain">
+							<label for="header-search">
+								<img src="img/icons/search.svg" alt="Search Icon">
+							</label>
+							<input type="search" id="header-search" name="header-search"
+								placeholder="Search words or phrases..." />
+						</div>
+						<ul class="search-header__list">
+							<li>
+								<div class="search-header__content">
+									<div class="search-header__title">run</div>
+									<div class="search-header__meanings">27 meanings</div>
+								</div>
+								<div class="search-header__text">noun • verb</div>
+							</li>
+							<li>
+								<div class="search-header__content">
+									<div class="search-header__title">run out</div>
+									<div class="search-header__meanings">4 meanings</div>
+								</div>
+								<div class="search-header__text">verb</div>
+							</li>
+							<li>
+								<div class="search-header__content">
+									<div class="search-header__title">run away</div>
+									<div class="search-header__meanings">2 meanings</div>
+								</div>
+								<div class="search-header__text">verb</div>
+							</li>
+							<li>
+								<div class="search-header__content">
+									<div class="search-header__title">run out of</div>
+								</div>
+								<div class="search-header__text">verb</div>
+							</li>
+							<li>
+								<div class="search-header__content">
+									<div class="search-header__title">runner</div>
+									<div class="search-header__meanings">9 meanings</div>
+								</div>
+								<div class="search-header__text">noun</div>
+							</li>
+						</ul>
+					</div>
+					<button class="search-header__close" type="button" aria-label="close button">
+						<img src="img/icons/close.svg" alt="close icon">
+					</button>
+				</div>
+				<div class="header__actions actions actions--contain">
+					<button class="actions__btn actions__btn--search" type="button" aria-label="open/closed search input">
 						<img src="img/icons/search.svg" alt="Search Icon">
-					</label>
-					<input type="search" id="header-search" name="header-search" placeholder="Search words or phrases..." />
+					</button>
+					<button class="actions__btn actions__btn--menu" type="button" aria-label="open/closed menu">
+						<img src="img/icons/dots.svg" alt="menu">
+					</button>
 				</div>
 				<div class="header__dark-light-mode dark-light-mode">
 					<button type="button" aria-label="Light Mode" class="dark-light-mode__sun">
@@ -264,6 +316,9 @@
 						</div>
 					</aside>
 					<div class="home-hero__home-content home-content">
+						<div class="home-content__image home-content__image--contain">
+							<img src="img/panel/2.png" alt="runner">
+						</div>
 						<section class="home-content__section home-content__section--margin-bottom">
 							<div class="home-content__header-section header-section">
 								<h1 class="header-section__title">to run</h1>
@@ -330,8 +385,7 @@
 								</li>
 							</ul>
 							<div class="home-content__verb verb">
-								<span>verb</span>
-								<span>Irregular verb: ran (past), run (past participle)</span>
+								verb • Irregular verb: ran (past), run (past participle)
 							</div>
 							<div class="home-content__sentence">To move a boat fast in the same direction as the wind</div>
 							<div class="home-content__example">
@@ -398,7 +452,8 @@
 							</div>
 						</div>
 						<div class="home-content__label">Examples</div>
-						<div class="home-content__examples-block examples-block examples-block--margin-bottom">
+						<div
+							class="home-content__examples-block examples-block examples-block--mobile-hide examples-block--margin-bottom">
 							<ul class="examples-block__tags">
 								<li><button class="active" type="button" aria-label="All">All</button></li>
 								<li><button type="button" aria-label="All">Movie</button></li>
@@ -412,12 +467,12 @@
 											<p>During the race, she trained hard so she could <strong>run</strong> faster than her
 												competitors.</p>
 										</div>
-									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
 								</li>
@@ -427,25 +482,25 @@
 											<p>I didn't know what to do, so I just <strong>ran</strong> back as fast as I could.
 											</p>
 										</div>
-										<div class="examples-block__footer">
-											<div class="examples-block__icon">
-												<svg width="13" height="13" viewBox="0 0 13 13" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd"
-														d="M10.5738 0.0220347C11.114 -0.0927646 11.6454 0.252382 11.7603 0.792543L12.1246 2.50446C12.1816 2.77437 12.0087 3.03984 11.7388 3.09723L2.41167 5.07965H11.9039C12.1798 5.07989 12.4038 5.30369 12.4039 5.57965V11.0797C12.4036 11.6316 11.9558 12.0794 11.4039 12.0797H1.40386C0.85173 12.0797 0.404113 11.6317 0.403857 11.0797V5.07965L0.022021 3.28766C-0.0927433 2.74753 0.252446 2.21604 0.792529 2.10114L10.5738 0.0220347ZM2.25737 5.92926C2.17805 5.92926 2.13816 5.92954 2.10112 5.93512C1.98492 5.9527 1.87807 6.01103 1.80034 6.09918C1.77579 6.12716 1.75419 6.1609 1.71147 6.22711L1.55034 6.47711C1.42173 6.67646 1.35667 6.77656 1.33647 6.85504C1.27141 7.10912 1.41386 7.37063 1.66265 7.45368C1.73957 7.4793 1.85874 7.48004 2.09624 7.48004H3.29936C3.37856 7.48004 3.41863 7.47974 3.45561 7.47418C3.57167 7.45664 3.67771 7.39807 3.75542 7.31012C3.78015 7.28207 3.80238 7.24866 3.84526 7.18219L4.0064 6.93219C4.13487 6.73305 4.19992 6.63271 4.22026 6.55426C4.28553 6.30013 4.14289 6.03877 3.89409 5.95563C3.81717 5.93 3.69802 5.92926 3.4605 5.92926H2.25737ZM5.88237 5.92926C5.80305 5.92926 5.76316 5.92954 5.72612 5.93512C5.60992 5.9527 5.50307 6.01103 5.42534 6.09918C5.40079 6.12716 5.37919 6.1609 5.33647 6.22711L5.17534 6.47711C5.04673 6.67646 4.98167 6.77656 4.96147 6.85504C4.89641 7.10912 5.03886 7.37063 5.28765 7.45368C5.36457 7.4793 5.48374 7.48004 5.72124 7.48004H6.92436C7.00356 7.48004 7.04363 7.47974 7.08061 7.47418C7.19667 7.45664 7.30271 7.39807 7.38042 7.31012C7.40515 7.28207 7.42738 7.24866 7.47026 7.18219L7.6314 6.93219C7.75987 6.73305 7.82492 6.63271 7.84526 6.55426C7.91053 6.30013 7.76789 6.03877 7.51909 5.95563C7.44216 5.93 7.32302 5.92926 7.0855 5.92926H5.88237ZM9.50737 5.92926C9.42805 5.92926 9.38816 5.92954 9.35112 5.93512C9.23492 5.9527 9.12807 6.01103 9.05034 6.09918C9.02579 6.12716 9.00419 6.1609 8.96147 6.22711L8.80034 6.47711C8.67173 6.67646 8.60667 6.77656 8.58647 6.85504C8.52141 7.10912 8.66386 7.37063 8.91265 7.45368C8.98957 7.4793 9.10874 7.48004 9.34624 7.48004H10.5494C10.6286 7.48004 10.6686 7.47974 10.7056 7.47418C10.8217 7.45664 10.9277 7.39807 11.0054 7.31012C11.0302 7.28207 11.0524 7.24866 11.0953 7.18219L11.2564 6.93219C11.3849 6.73305 11.4499 6.63271 11.4703 6.55426C11.5355 6.30013 11.3929 6.03877 11.1441 5.95563C11.0672 5.93 10.948 5.92926 10.7105 5.92926H9.50737ZM3.41167 2.44293C3.33109 2.43389 3.21429 2.45898 2.98198 2.50836L1.80522 2.75836C1.7278 2.77482 1.68888 2.7833 1.65386 2.79645C1.54385 2.83781 1.4518 2.91671 1.39409 3.0191C1.37582 3.05161 1.36158 3.08896 1.33354 3.16266L1.2271 3.44098C1.14277 3.66264 1.10067 3.77408 1.09722 3.85504C1.0864 4.11708 1.27999 4.34308 1.54058 4.37262C1.62114 4.38169 1.738 4.35754 1.97026 4.30817L3.14702 4.05817C3.22439 4.04172 3.2634 4.03319 3.29839 4.02008C3.40836 3.9788 3.5004 3.8997 3.55815 3.79743C3.57653 3.76482 3.59053 3.72696 3.6187 3.65289L3.72515 3.37555C3.80936 3.15418 3.8514 3.04244 3.85503 2.96149C3.86604 2.69929 3.6724 2.47246 3.41167 2.44293ZM6.95757 1.69C6.87699 1.68096 6.76019 1.70508 6.52788 1.75446L5.35112 2.00446C5.27372 2.02091 5.23475 2.02943 5.19976 2.04254C5.08981 2.08387 4.9977 2.1629 4.93999 2.2652C4.92167 2.29779 4.90664 2.33568 4.87847 2.40973L4.773 2.68707C4.68876 2.9085 4.64665 3.0202 4.64311 3.10114C4.63229 3.36324 4.82579 3.59025 5.08647 3.61969C5.16703 3.62876 5.2839 3.60363 5.51616 3.55426L6.69194 3.30426C6.76953 3.28777 6.80924 3.2793 6.84429 3.26618C6.9542 3.22486 7.04633 3.14577 7.10405 3.04352C7.12235 3.011 7.13657 2.97365 7.1646 2.89996L7.27104 2.62164C7.35533 2.40008 7.39737 2.28855 7.40093 2.20758C7.41193 1.94545 7.21819 1.71962 6.95757 1.69ZM10.5025 0.936097C10.4219 0.92716 10.3057 0.951264 10.0738 1.00055L8.89702 1.25153C8.81978 1.26794 8.7806 1.27557 8.74565 1.28864C8.6358 1.32993 8.54361 1.40911 8.48589 1.51129C8.46756 1.54388 8.45254 1.58177 8.42437 1.65582L8.3189 1.93414C8.23458 2.15578 8.19241 2.26726 8.18901 2.34821C8.17834 2.61022 8.37173 2.8364 8.63237 2.86578C8.71289 2.87485 8.82906 2.84967 9.06108 2.80035L10.2378 2.55035C10.3154 2.53386 10.3551 2.5254 10.3902 2.51227C10.5 2.47094 10.5923 2.3918 10.65 2.28961C10.6682 2.25712 10.6825 2.21974 10.7105 2.14606L10.816 1.86774C10.9003 1.646 10.9433 1.53466 10.9468 1.45368C10.9578 1.19141 10.7633 0.965469 10.5025 0.936097Z"
-														fill="#FBFCFF" />
-												</svg>
-											</div>
-											<div class="examples-block__link">
-												<a href="#">Hell of a Summer (2023)</a>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
 											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
+									<div class="examples-block__footer">
+										<div class="examples-block__icon">
+											<svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M10.5738 0.0220347C11.114 -0.0927646 11.6454 0.252382 11.7603 0.792543L12.1246 2.50446C12.1816 2.77437 12.0087 3.03984 11.7388 3.09723L2.41167 5.07965H11.9039C12.1798 5.07989 12.4038 5.30369 12.4039 5.57965V11.0797C12.4036 11.6316 11.9558 12.0794 11.4039 12.0797H1.40386C0.85173 12.0797 0.404113 11.6317 0.403857 11.0797V5.07965L0.022021 3.28766C-0.0927433 2.74753 0.252446 2.21604 0.792529 2.10114L10.5738 0.0220347ZM2.25737 5.92926C2.17805 5.92926 2.13816 5.92954 2.10112 5.93512C1.98492 5.9527 1.87807 6.01103 1.80034 6.09918C1.77579 6.12716 1.75419 6.1609 1.71147 6.22711L1.55034 6.47711C1.42173 6.67646 1.35667 6.77656 1.33647 6.85504C1.27141 7.10912 1.41386 7.37063 1.66265 7.45368C1.73957 7.4793 1.85874 7.48004 2.09624 7.48004H3.29936C3.37856 7.48004 3.41863 7.47974 3.45561 7.47418C3.57167 7.45664 3.67771 7.39807 3.75542 7.31012C3.78015 7.28207 3.80238 7.24866 3.84526 7.18219L4.0064 6.93219C4.13487 6.73305 4.19992 6.63271 4.22026 6.55426C4.28553 6.30013 4.14289 6.03877 3.89409 5.95563C3.81717 5.93 3.69802 5.92926 3.4605 5.92926H2.25737ZM5.88237 5.92926C5.80305 5.92926 5.76316 5.92954 5.72612 5.93512C5.60992 5.9527 5.50307 6.01103 5.42534 6.09918C5.40079 6.12716 5.37919 6.1609 5.33647 6.22711L5.17534 6.47711C5.04673 6.67646 4.98167 6.77656 4.96147 6.85504C4.89641 7.10912 5.03886 7.37063 5.28765 7.45368C5.36457 7.4793 5.48374 7.48004 5.72124 7.48004H6.92436C7.00356 7.48004 7.04363 7.47974 7.08061 7.47418C7.19667 7.45664 7.30271 7.39807 7.38042 7.31012C7.40515 7.28207 7.42738 7.24866 7.47026 7.18219L7.6314 6.93219C7.75987 6.73305 7.82492 6.63271 7.84526 6.55426C7.91053 6.30013 7.76789 6.03877 7.51909 5.95563C7.44216 5.93 7.32302 5.92926 7.0855 5.92926H5.88237ZM9.50737 5.92926C9.42805 5.92926 9.38816 5.92954 9.35112 5.93512C9.23492 5.9527 9.12807 6.01103 9.05034 6.09918C9.02579 6.12716 9.00419 6.1609 8.96147 6.22711L8.80034 6.47711C8.67173 6.67646 8.60667 6.77656 8.58647 6.85504C8.52141 7.10912 8.66386 7.37063 8.91265 7.45368C8.98957 7.4793 9.10874 7.48004 9.34624 7.48004H10.5494C10.6286 7.48004 10.6686 7.47974 10.7056 7.47418C10.8217 7.45664 10.9277 7.39807 11.0054 7.31012C11.0302 7.28207 11.0524 7.24866 11.0953 7.18219L11.2564 6.93219C11.3849 6.73305 11.4499 6.63271 11.4703 6.55426C11.5355 6.30013 11.3929 6.03877 11.1441 5.95563C11.0672 5.93 10.948 5.92926 10.7105 5.92926H9.50737ZM3.41167 2.44293C3.33109 2.43389 3.21429 2.45898 2.98198 2.50836L1.80522 2.75836C1.7278 2.77482 1.68888 2.7833 1.65386 2.79645C1.54385 2.83781 1.4518 2.91671 1.39409 3.0191C1.37582 3.05161 1.36158 3.08896 1.33354 3.16266L1.2271 3.44098C1.14277 3.66264 1.10067 3.77408 1.09722 3.85504C1.0864 4.11708 1.27999 4.34308 1.54058 4.37262C1.62114 4.38169 1.738 4.35754 1.97026 4.30817L3.14702 4.05817C3.22439 4.04172 3.2634 4.03319 3.29839 4.02008C3.40836 3.9788 3.5004 3.8997 3.55815 3.79743C3.57653 3.76482 3.59053 3.72696 3.6187 3.65289L3.72515 3.37555C3.80936 3.15418 3.8514 3.04244 3.85503 2.96149C3.86604 2.69929 3.6724 2.47246 3.41167 2.44293ZM6.95757 1.69C6.87699 1.68096 6.76019 1.70508 6.52788 1.75446L5.35112 2.00446C5.27372 2.02091 5.23475 2.02943 5.19976 2.04254C5.08981 2.08387 4.9977 2.1629 4.93999 2.2652C4.92167 2.29779 4.90664 2.33568 4.87847 2.40973L4.773 2.68707C4.68876 2.9085 4.64665 3.0202 4.64311 3.10114C4.63229 3.36324 4.82579 3.59025 5.08647 3.61969C5.16703 3.62876 5.2839 3.60363 5.51616 3.55426L6.69194 3.30426C6.76953 3.28777 6.80924 3.2793 6.84429 3.26618C6.9542 3.22486 7.04633 3.14577 7.10405 3.04352C7.12235 3.011 7.13657 2.97365 7.1646 2.89996L7.27104 2.62164C7.35533 2.40008 7.39737 2.28855 7.40093 2.20758C7.41193 1.94545 7.21819 1.71962 6.95757 1.69ZM10.5025 0.936097C10.4219 0.92716 10.3057 0.951264 10.0738 1.00055L8.89702 1.25153C8.81978 1.26794 8.7806 1.27557 8.74565 1.28864C8.6358 1.32993 8.54361 1.40911 8.48589 1.51129C8.46756 1.54388 8.45254 1.58177 8.42437 1.65582L8.3189 1.93414C8.23458 2.15578 8.19241 2.26726 8.18901 2.34821C8.17834 2.61022 8.37173 2.8364 8.63237 2.86578C8.71289 2.87485 8.82906 2.84967 9.06108 2.80035L10.2378 2.55035C10.3154 2.53386 10.3551 2.5254 10.3902 2.51227C10.5 2.47094 10.5923 2.3918 10.65 2.28961C10.6682 2.25712 10.6825 2.21974 10.7105 2.14606L10.816 1.86774C10.9003 1.646 10.9433 1.53466 10.9468 1.45368C10.9578 1.19141 10.7633 0.965469 10.5025 0.936097Z"
+													fill="#FBFCFF" />
+											</svg>
+										</div>
+										<div class="examples-block__link">
+											<a href="#">Hell of a Summer (2023)</a>
 										</div>
 									</div>
 								</li>
@@ -454,25 +509,25 @@
 										<div class="examples-block__text">
 											<p>When the lights go out, <strong>run</strong> away with me.</p>
 										</div>
-										<div class="examples-block__footer">
-											<div class="examples-block__icon">
-												<svg width="15" height="11" viewBox="0 0 15 11" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd"
-														d="M7.40918 0C7.40918 0 12.0478 0.000155807 13.2002 0.314453C13.8382 0.485957 14.3432 0.990877 14.5146 1.62891C14.8288 2.79105 14.8379 5.2002 14.8379 5.2002C14.8379 5.22454 14.8361 7.62491 14.5234 8.77148C14.352 9.40946 13.8479 9.9144 13.21 10.0859C12.0608 10.3993 7.44518 10.4004 7.41895 10.4004C7.41895 10.4004 2.78035 10.4002 1.62793 10.0859C0.989901 9.91445 0.484894 9.40954 0.313477 8.77148C0.000822186 7.61539 8.09305e-06 5.22449 0 5.2002C0 5.2002 -8.56519e-05 2.79012 0.304688 1.6377C0.476186 0.999855 0.980319 0.494729 1.61816 0.323242C2.76707 0.00990522 7.381 6.07733e-05 7.40918 0ZM5.93262 7.42871L9.78125 5.2002L5.93262 2.97168V7.42871Z"
-														fill="#FBFCFF" />
-												</svg>
-											</div>
-											<div class="examples-block__link">
-												<a href="#">Channel: Edward Avila</a>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
 											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
+									<div class="examples-block__footer">
+										<div class="examples-block__icon">
+											<svg width="15" height="11" viewBox="0 0 15 11" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M7.40918 0C7.40918 0 12.0478 0.000155807 13.2002 0.314453C13.8382 0.485957 14.3432 0.990877 14.5146 1.62891C14.8288 2.79105 14.8379 5.2002 14.8379 5.2002C14.8379 5.22454 14.8361 7.62491 14.5234 8.77148C14.352 9.40946 13.8479 9.9144 13.21 10.0859C12.0608 10.3993 7.44518 10.4004 7.41895 10.4004C7.41895 10.4004 2.78035 10.4002 1.62793 10.0859C0.989901 9.91445 0.484894 9.40954 0.313477 8.77148C0.000822186 7.61539 8.09305e-06 5.22449 0 5.2002C0 5.2002 -8.56519e-05 2.79012 0.304688 1.6377C0.476186 0.999855 0.980319 0.494729 1.61816 0.323242C2.76707 0.00990522 7.381 6.07733e-05 7.40918 0ZM5.93262 7.42871L9.78125 5.2002L5.93262 2.97168V7.42871Z"
+													fill="#FBFCFF" />
+											</svg>
+										</div>
+										<div class="examples-block__link">
+											<a href="#">Channel: Edward Avila</a>
 										</div>
 									</div>
 								</li>
@@ -600,53 +655,53 @@
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label active">to escape</div>
-										<div class="examples-block__text">
-											<p>Get away from a place, danger, harm, or responsibility quickly</p>
-										</div>
-										<div class="examples-block__notification">run: is quick motion that may not carry the idea
-											of getting away</div>
-									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
+									<div class="examples-block__text">
+										<p>Get away from a place, danger, harm, or responsibility quickly</p>
+									</div>
+									<div class="examples-block__notification">run: is quick motion that may not carry the idea
+										of getting away</div>
 								</li>
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">run away</div>
-										<div class="examples-block__text">
-											<p>Leave a place or person suddenly and secretly to avoid danger or control</p>
-										</div>
-										<div class="examples-block__notification">Leave a place or person suddenly and secretly to
-											avoid danger or control</div>
-									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
+									<div class="examples-block__text">
+										<p>Leave a place or person suddenly and secretly to avoid danger or control</p>
+									</div>
+									<div class="examples-block__notification">run: is broader and includes open fast movement,
+										not only secretive leaving</div>
 								</li>
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">to flee</div>
-										<div class="examples-block__text">
-											<p>Get away from a place quickly to avoid danger or harm</p>
-										</div>
-										<div class="examples-block__notification">run: is broader fast movement that may not
-											involve danger avoidance</div>
-									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
+									<div class="examples-block__text">
+										<p>Get away from a place quickly to avoid danger or harm</p>
+									</div>
+									<div class="examples-block__notification">run: is broader fast movement that may not
+										involve danger avoidance</div>
 								</li>
 							</ul>
 							<div class="examples-block__show"><button type="button" aria-label="show all">Show all</button>
@@ -658,16 +713,16 @@
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">stand still</div>
-										<div class="examples-block__text">
-											<p>Stay upright in one place without moving</p>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
-										</div>
+									<div class="examples-block__text">
+										<p>Stay upright in one place without moving</p>
 									</div>
 								</li>
 							</ul>
@@ -678,47 +733,46 @@
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">run in the family</div>
-										<div class="examples-block__text">
-											<p>Something many members of the same family have</p>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
-										</div>
+									<div class="examples-block__text">
+										<p>Something many members of the same family have</p>
 									</div>
 								</li>
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">run for one's life</div>
-										<div class="examples-block__text">
-											<p>Leave a place or person suddenly and secretly to avoid danger or control</p>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
-										<div class="examples-block__notification">Get away very quickly to avoid being hurt</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
-										</div>
+									<div class="examples-block__text">
+										<p>Get away very quickly to avoid being hurt</p>
 									</div>
 								</li>
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">in the short run</div>
-										<div class="examples-block__text">
-											<p>For a short time without thinking about long-term effects</p>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
-										</div>
+									<div class="examples-block__text">
+										<p>For a short time without thinking about long-term effects</p>
 									</div>
 								</li>
 							</ul>
@@ -731,46 +785,46 @@
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">run out</div>
-										<div class="examples-block__text">
-											<p>Use all of something so none is left</p>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="examples-block__content">
-										<div class="examples-block__label">run out</div>
-										<div class="examples-block__text">
-											<p>Stop being valid after a set time</p>
-										</div>
-									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
-										</div>
+									<div class="examples-block__text">
+										<p>Use all of something so none is left</p>
 									</div>
 								</li>
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">run out</div>
-										<div class="examples-block__text">
-											<p>Leave a place suddenly, often to avoid someone or something</p>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
+									<div class="examples-block__text">
+										<p>Stop being valid after a set time</p>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">run out</div>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
+									</div>
+									<div class="examples-block__text">
+										<p>Leave a place suddenly, often to avoid someone or something</p>
 									</div>
 								</li>
 							</ul>
@@ -783,46 +837,46 @@
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">long run</div>
-										<div class="examples-block__text">
-											<p>A long time when you see the final result of actions</p>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="examples-block__content">
-										<div class="examples-block__label">home run</div>
-										<div class="examples-block__text">
-											<p>A hit that lets the batter run all the bases and score a run</p>
-										</div>
-									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
-										</div>
+									<div class="examples-block__text">
+										<p>A long time when you see the final result of actions</p>
 									</div>
 								</li>
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__label">home run</div>
-										<div class="examples-block__text">
-											<p>A very successful result that achieves its goal</p>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
 									</div>
-									<div class="examples-block__info">
-										<div class="examples-block__rate rate">100/m</div>
-										<div class="examples-block__level level level--green">
-											<span class="level__dot level__dot--green"></span>
-											<span class="level__value">1.0</span>
+									<div class="examples-block__text">
+										<p>A hit that lets the batter run all the bases and score a run</p>
+									</div>
+								</li>
+								<li>
+									<div class="examples-block__content">
+										<div class="examples-block__label">home run</div>
+										<div class="examples-block__info">
+											<div class="examples-block__rate rate">100/m</div>
+											<div class="examples-block__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+											</div>
 										</div>
+									</div>
+									<div class="examples-block__text">
+										<p>A very successful result that achieves its goal</p>
 									</div>
 								</li>
 							</ul>
@@ -851,42 +905,41 @@
 					</aside>
 				</div>
 			</div>
-	</div>
-	</main>
+		</main>
 
-	<footer class="footer">
-		<div class="footer__container">
-			<div class="footer__content">
-				<ul class="footer__title">
-					<li>Glite Dictionary</li>
-					<li>Glite Vocabulary Test</li>
-					<li>Glite Image Test</li>
-				</ul>
-				<ul class="footer__list">
-					<li><a href="#">Help</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Contact Us</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Terms of Use</a></li>
-					<li><a href="#">Copyright © Glite Tech Ltd, 2024</a></li>
-				</ul>
-			</div>
-			<div class="footer__image footer__image--contain">
-				<div class="footer__qr">
-					<img src="img/icons/qr.svg" alt="QR code">
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<ul class="footer__title">
+						<li>Glite Dictionary</li>
+						<li>Glite Vocabulary Test</li>
+						<li>Glite Image Test</li>
+					</ul>
+					<ul class="footer__list">
+						<li><a href="#">Help</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Copyright © Glite Tech Ltd, 2024</a></li>
+					</ul>
 				</div>
-				<div class="footer__body">
-					<div class="footer__logo">
-						<img src="img/footer-logo.svg" alt="Glite logo">
+				<div class="footer__image footer__image--contain">
+					<div class="footer__qr">
+						<img src="img/icons/qr.svg" alt="QR code">
 					</div>
-					<div class="footer__text">
-						<p>The English Learning App for Intermediate & Advanced Learners</p>
+					<div class="footer__body">
+						<div class="footer__logo">
+							<img src="img/footer-logo.svg" alt="Glite logo">
+						</div>
+						<div class="footer__text">
+							<p>The English Learning App for Intermediate & Advanced Learners</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

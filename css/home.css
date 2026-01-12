@@ -1,15 +1,5 @@
 @import 'style.css';
 
-.home-hero {
-  padding-block: 1.5rem 7.5rem;
-}
-
-.home-hero__container {
-  display: grid;
-  grid-template-columns: 341fr 773fr 341fr;
-  column-gap: 3.53125rem; /* 56.5/16 */
-}
-
 .meanings__list {
   display: flex;
   flex-direction: column;
@@ -167,6 +157,7 @@
   border-radius: 0.625rem; /* 10/16 */
 }
 .panel__footer {
+  max-inline-size: 21.3125rem; /* 341/16 */
   background: var(--meanings-card-background);
   padding-inline: 1.25rem; /* 20/16 */
   padding-block: 2.5rem 1.5rem;
@@ -291,25 +282,8 @@
   margin-block-end: 1rem; /* 16/16 */
 }
 .verb {
-  display: flex;
-  align-items: center;
-  gap: 0.3125rem; /* 5/16 */
   line-height: 1.5;
   color: var(--meanings-card-text);
-}
-.verb span:first-child {
-  display: flex;
-  align-items: center;
-  column-gap: 0.3125rem; /* 5/16 */
-}
-.verb span:first-child::after {
-  content: '';
-  background: var(--meanings-card-text);
-  inline-size: 0.25rem; /* 4/16 */
-  flex-basis: 0.25rem; /* 4/16 */
-  flex-shrink: 0;
-  aspect-ratio: 1;
-  border-radius: 50%;
 }
 .home-content__sentence {
   font-size: 1.375rem; /* 22/16 */
@@ -397,6 +371,8 @@
 }
 
 .swiper-actions__pagination {
+  flex-shrink: 0;
+  inline-size: fit-content;
   font-size: 1.125rem; /* 18/16 */
   line-height: 1.56;
 }
@@ -475,23 +451,25 @@
   color: var(--meanings-title);
 }
 .examples-block__list li {
+  padding-block: 1rem; /* 16/16 */
+  border-block-end: 0.0625rem solid var(--examples-border-bg);
+}
+.examples-block__content {
   display: flex;
   column-gap: 1rem; /* 16/16 */
   row-gap: 0.5rem; /* 8/16 */
   justify-content: space-between;
-  padding-block: 1rem; /* 16/16 */
-  border-block-end: 0.0625rem solid var(--examples-border-bg);
 }
 .examples-block__list--border-none li {
   border-block-end: inherit;
 }
 .examples-block__content {
   line-height: 1.5;
+  margin-block-end: 0.625rem; /* 10/16 */
 }
 .examples-block__label {
   text-decoration: underline;
   text-underline-offset: 0.375rem;
-  margin-block-end: 0.375rem; /* 6/16 */
 }
 .examples-block__label.active {
   text-decoration: inherit;
@@ -670,6 +648,96 @@
 }
 .etymology__text p:not(:last-child) {
   margin-block-end: 0.5rem; /* 8/16 */
+}
+@media (min-width: 767.98px) {
+  .home-hero__container {
+    display: grid;
+    gap: 1.5rem; /* 24/16 */
+  }
+  .home-hero {
+    padding-block: 1.5rem 7.5rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .home-hero__container {
+    grid-template-columns: 341fr 773fr 341fr;
+    column-gap: clamp(1.5rem, 5.255vw - 1.755rem, 3.5rem); /* 24 > 56.5 991 > 1600 */
+  }
+  .home-content__image {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .panel {
+    display: none;
+  }
+  .home-content__image {
+    margin-block-end: 1.5rem; /* 24/16 */
+  }
+  .home-content__image img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}
+@media (max-width: 991.98px) and (min-width: 767.98px) {
+  .home-hero__container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (max-width: 767.98px) {
+  .home-hero {
+    padding-block-end: 2rem; /* 32/16 */
+  }
+  .meanings {
+    display: none;
+  }
+}
+@media (max-width: 479.98px) {
+  .header-section__title {
+    font-size: 1.375rem; /* 22/16 */
+    line-height: 1.36; /* 30/22 */
+  }
+  .swiper-actions__action {
+    display: none;
+  }
+  .swiper-actions__body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    inline-size: 100%;
+  }
+  .swiper-actions__pagination {
+    justify-self: center;
+  }
+  .swiper-actions__arrow {
+    inline-size: 3rem; /* 48/16 */
+  }
+  .sounds {
+    column-gap: 0.625rem; /* 10/16 */
+  }
+  .home-content__section--margin-bottom,
+  .examples-block--margin-bottom,
+  .fast--margin-bottom,
+  .surface--margin-bottom,
+  .home-content__sentence,
+  .home-content__hero-swiper {
+    margin-block-end: 1.5rem; /* 24/16 */
+  }
+  .hero-swiper__text,
+  .swiper-actions,
+  .examples-block,
+  .fast,
+  .surface {
+    padding-inline: 0.75rem; /* 12/16 */
+  }
+  .surface {
+    padding-block: 1rem; /* 16/16 */
+  }
+  .fast__title {
+    margin-block-end: 1rem; /* 16/16 */
+  }
+  .examples-block--mobile-hide .examples-block__info {
+    display: none;
+  }
 }
 @media (any-hover: hover) {
   .panel__footer button:hover,
