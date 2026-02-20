@@ -1,0 +1,889 @@
+@import "style.css";
+
+.meanings__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 16/16 */
+}
+
+.card-meanings {
+  border-radius: 0.5rem;
+  max-block-size: 45.6875rem;
+  overflow-y: auto;
+}
+.card-meanings::-webkit-scrollbar {
+  display: none;
+}
+.card-meanings__header {
+  background: var(--meanings-card-background);
+  padding-block: 1.375rem; /* 22/16 */
+  padding-inline: 1.25rem; /* 20/16 */
+  color: var(--meanings-title);
+  display: flex;
+  column-gap: 1rem; /* 16/16 */
+  justify-content: space-between;
+  align-items: center;
+}
+.card-meanings__title {
+  line-height: 1.5;
+  font-weight: 700;
+}
+.card-meanings__header button {
+  inline-size: 1.75rem; /* 28/16 */
+  aspect-ratio: 1;
+  flex-basis: 1.75rem; /* 28/16 */
+  flex-shrink: 0;
+  border: 0.125rem solid var(--meanings-plus-minus);
+  border-radius: 50%;
+  position: relative;
+}
+.card-meanings__header button::after,
+.card-meanings__header button::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--meanings-plus-minus);
+  border-radius: 0.5rem;
+}
+.card-meanings__header button::before {
+  inline-size: 0.75rem;
+  block-size: 0.125rem;
+}
+.card-meanings__header button::after {
+  inline-size: 0.125rem;
+  block-size: 0.75rem;
+  transition: block-size 0.3s;
+}
+.card-meanings__header.active button::after {
+  block-size: 0;
+}
+.card-meanings__list li {
+  background: var(--meanings-card-background);
+  padding-inline: 1.25rem; /* 20/16 */
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.card-meanings__list li.active {
+  background: var(--meanings-card-background-active);
+}
+.card-meanings__list li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inline-size: 0.375rem; /* 6/16 */
+  block-size: 100%;
+  background: var(--primary-600);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+}
+.card-meanings__list li.active::before {
+  opacity: 1;
+  visibility: visible;
+}
+.card-meanings__list li article {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  column-gap: 0.5rem; /* 8/16 */
+  padding-block: 0.625rem 0.6875rem;
+  border-block-start: 0.0625rem solid var(--meanings-border);
+  transition: border-block-start 0.3s;
+}
+.card-meanings__list li:first-child article,
+.card-meanings__list li:nth-child(2) article {
+  border-block-start: 0.0625rem solid transparent;
+}
+.card-meanings__image {
+  inline-size: 1.125rem; /* 18/16 */
+  aspect-ratio: 1;
+}
+
+.card-meanings__content h3 {
+  line-height: 1.5;
+  color: var(--meanings-title);
+}
+.card-meanings__text {
+  color: var(--meanings-card-text);
+  line-height: 1.333;
+  font-size: 0.75rem; /* 12/16 */
+}
+.card-meanings__info {
+  display: flex;
+  column-gap: 0.5rem; /* 8/16 */
+  justify-self: end;
+  align-self: start;
+}
+.card-meanings__rate,
+.card-meanings__level {
+  font-size: 0.75rem; /* 12/16 */
+  line-height: 1.333;
+  font-weight: 600;
+  padding-block: 0.25rem; /* 4/16 */
+  background: var(--meanings-card-rate-bg);
+  color: var(--meanings-card-text);
+  border-radius: 0.75rem; /* 12/16 */
+  padding-inline: 0.5625rem; /* 9/16 */
+}
+.card-meanings__level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.3125rem; /* 5/16 */
+}
+.card-meanings__dot {
+  inline-size: 0.5625rem;
+  flex-basis: 0.5625rem;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+.card-meanings__dot--green {
+  background: var(--success-500);
+}
+.card-meanings__dot--yellow {
+  background: var(--warning-500);
+}
+.card-meanings__dot--red {
+  background: var(--error-500);
+}
+.panel__image {
+  max-inline-size: 21.3125rem; /* 341/16 */
+}
+.panel__image img {
+  border-radius: 0.625rem; /* 10/16 */
+}
+.panel__footer {
+  max-inline-size: 21.3125rem; /* 341/16 */
+  background: var(--meanings-card-background);
+  padding-inline: 1.25rem; /* 20/16 */
+  padding-block: 2.5rem 1.5rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.5rem; /* 8/16 */
+}
+.panel__footer h3 {
+  font-size: 1.375rem; /* 22/16 */
+  line-height: 1.45; /* 32/22 */
+}
+.panel__footer button {
+  position: relative;
+  inline-size: 3rem; /* 48/16 */
+  aspect-ratio: 1;
+  background: var(--primary-600);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.panel__footer button::after,
+.panel__footer button::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--panel-plus-minus);
+  border-radius: 0.5rem;
+}
+.panel__footer button::before {
+  inline-size: 1rem;
+  block-size: 0.125rem;
+}
+.panel__footer button::after {
+  inline-size: 0.125rem;
+  block-size: 1rem;
+  transition: block-size 0.3s;
+}
+.panel__footer.active button::after {
+  block-size: 0;
+}
+.home-hero__home-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*max-inline-size: 48.3125rem;*/ /* 773/16 */
+}
+.home-content__section--margin-bottom,
+.examples-block--margin-bottom,
+.word-of-the-day-block--margin-bottom,
+.my-words-block--margin-bottom,
+.vocabulary-test-block--margin-bottom,
+.get-started-block--margin-bottom,
+.fast--margin-bottom,
+.surface--margin-bottom,
+.home-content__sentence,
+.home-content__hero-swiper {
+  margin-block-end: 2.5rem; /* 40/16 */
+}
+.home-content__header-section {
+  margin-block-end: 1rem; /* 16/16 */
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem; /* 16/16 */
+}
+.header-section__title {
+  font-size: 2.625rem; /* 42/16 */
+  line-height: 1.52;
+}
+.header-section__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* 8/16 */
+}
+.header-section__learing {
+  font-weight: 700;
+  line-height: 1.38;
+  background: var(--primary-600);
+  color: var(--gray-50);
+  border-radius: 6.25rem;
+  padding-block: 0.625rem; /* 10/16 */
+  padding-inline: 1.375rem; /* 22/16 */
+  transition: background 0.3s;
+}
+.sounds {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem; /* 20/16 */
+  row-gap: 0.5rem; /* 8/16 */
+}
+.sounds__item {
+  display: flex;
+  column-gap: 0.5rem; /* 8/16 */
+  align-items: center;
+}
+.sounds__language {
+  line-height: 1.5;
+  font-weight: 600;
+}
+.sounds__btn {
+  inline-size: 1.25rem; /* 20/16 */
+  flex-basis: 1.25rem; /* 20/16 */
+  flex-shrink: 0;
+  aspect-ratio: 20 / 16;
+}
+.sounds__btn svg {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+}
+.sounds__btn svg path {
+  fill: var(--primary-text-color);
+  transition: fill 0.3s;
+}
+.sounds__transcription {
+  line-height: 1.5;
+  color: var(--meanings-card-text);
+}
+.home-content__sounds,
+.home-content__verb {
+  margin-block-end: 1rem; /* 16/16 */
+}
+.verb {
+  line-height: 1.5;
+  color: var(--meanings-card-text);
+}
+.home-content__sentence {
+  font-size: 2.375rem; /* 22/16 */
+}
+.home-content__example {
+  display: flex;
+  gap: 0.5rem; /* 8/16 */
+}
+.home-content__example > span {
+  font-size: 0.75rem; /* 12/16 */
+  line-height: 1.333;
+  color: var(--meanings-card-text);
+  background: var(--meanings-card-background-active);
+  padding-block: 0.125rem; /* 2/16 */
+  padding-inline: 0.375rem; /* 6/16 */
+  border-radius: 0.125rem; /* 2/16 */
+  align-self: flex-start;
+}
+.home-content__example p {
+  align-self: center;
+}
+.hero-swiper {
+  background: var(--swiper-bg);
+  border-top-left-radius: 1rem; /* 16/16 */
+  border-top-right-radius: 1rem; /* 16/16 */
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.hero-swiper__swiper-slide {
+  max-inline-size: 48.3125rem; /* 773/16 */
+  inline-size: 100% !important;
+}
+
+.hero-swiper__iframe {
+  max-inline-size: 48.3125rem; /* 773/16 */
+  aspect-ratio: 773 / 435;
+  margin-block-end: 1.25rem; /* 20/16 */
+}
+.hero-swiper__iframe iframe {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  border-top-left-radius: 1rem; /* 16/16 */
+  border-top-right-radius: 1rem; /* 16/16 */
+}
+.hero-swiper__text {
+  padding-inline: 1.25rem; /* 20/16 */
+  font-size: 1.125rem; /* 18/16 */
+  line-height: 1.56;
+}
+.hero-swiper__text strong {
+  color: var(--primary-300);
+}
+.hero-swiper__text p:not(:last-child) {
+  margin-block-end: 0.5rem; /* 8/16 */
+}
+.swiper-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1.5rem; /* 24/16 */
+  padding-block: 1.25rem; /* 20/16 */
+  padding-inline: 1.25rem; /* 20/16 */
+}
+.swiper-actions__body {
+  display: inline-flex;
+  column-gap: 1.25rem; /* 20/16 */
+  align-items: center;
+}
+.swiper-actions__arrow {
+  flex-basis: 2.25rem; /* 36/16 */
+  flex-shrink: 0;
+  inline-size: 2.25rem; /* 36/16 */
+  cursor: pointer;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--meanings-card-background-active);
+  transition: background 0.3s;
+}
+.swiper-actions__arrow svg path {
+  fill: var(--primary-text-color);
+}
+
+.swiper-actions__pagination {
+  flex-shrink: 0;
+  inline-size: fit-content;
+  font-size: 1.125rem; /* 18/16 */
+  line-height: 1.56;
+}
+.swiper-actions__action {
+  display: flex;
+  column-gap: 0.75rem; /* 12/16 */
+  align-items: center;
+}
+.swiper-actions__text {
+  line-height: 1.5;
+  color: var(--meanings-card-text);
+  text-shadow: var(--swiper-autoplay-text-shadow);
+}
+.swiper-actions__autoplay {
+  inline-size: 2.5rem; /* 40/16 */
+  block-size: 1.5rem; /* 24/16 */
+  border-radius: 624.9375rem;
+  background: var(--primary-background-color);
+  padding: 0.1875rem;
+  position: relative;
+  cursor: pointer;
+}
+.swiper-actions__autoplay::before {
+  content: "";
+  position: absolute;
+  inset-block-end: 0.1875rem;
+  inset-inline-end: 0.1875rem;
+  inline-size: 1.125rem; /* 18/16 */
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background: var(--primary-600);
+}
+.home-content__label {
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--meanings-title);
+  margin-block-end: 0.625rem; /* 10/16 */
+}
+.fast,
+.examples-block,
+.surface,
+.etymology,
+.word-of-the-day-block,
+.vocabulary-test-block,
+.get-started-block,
+.my-words-block {
+  background: var(--meanings-card-background);
+}
+.examples-block,
+.word-of-the-day-block,
+.my-words-block,
+.vocabulary-test-block,
+.get-started-block {
+  padding-block: 1.3125rem 1rem;
+  padding-inline: 1rem; /* 16/16 */
+
+  border-radius: 0.5rem; /* 8/16 */
+}
+.examples-block__tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.625rem; /* 10/16 */
+  line-height: 1.5;
+  color: var(--meanings-title);
+}
+.examples-block__tags button {
+  min-inline-size: 3.125rem; /* 50/16 */
+  text-align: center;
+  border-radius: 3.125rem;
+  padding-block: 0.25rem; /* 4/16 */
+  padding-inline: 0.75rem; /* 12/16 */
+  background: var(--examples-tags-bg);
+}
+.examples-block__tags button.active {
+  background: var(--primary-600);
+  color: var(--examples-tags-color-active);
+}
+.word-of-the-day__title,
+.examples-block__title,
+.etymology__title {
+  font-size: 1.375rem; /* 22/16 */
+  line-height: 1.36; /* 30/22 */
+  font-weight: 500;
+  color: var(--meanings-title);
+}
+.examples-block__list li {
+  padding-block: 1rem; /* 16/16 */
+  border-block-end: 0.0625rem solid var(--examples-border-bg);
+}
+.examples-block__content {
+  display: flex;
+  column-gap: 1rem; /* 16/16 */
+  row-gap: 0.5rem; /* 8/16 */
+  justify-content: space-between;
+}
+.examples-block__list--border-none li {
+  border-block-end: inherit;
+}
+.examples-block__content {
+  line-height: 1.5;
+  margin-block-end: 0.625rem; /* 10/16 */
+}
+.examples-block__label {
+  text-decoration: underline;
+  text-underline-offset: 0.375rem;
+}
+.examples-block__label.active {
+  text-decoration: inherit;
+}
+.examples-block__text {
+  margin-block-end: 0.1875rem; /* 3/16 */
+}
+.examples-block__notification {
+  font-size: 0.75rem; /* 12/16 */
+  line-height: 1.333;
+  color: var(--footer-text-color);
+}
+.examples-block__info {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.examples-block__footer {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem; /* 8/16 */
+}
+.examples-block__icon {
+  flex-basis: 0.8125rem;
+  flex-shrink: 0;
+}
+.examples-block__icon svg path {
+  fill: var(--examples-image);
+}
+.examples-block__link a {
+  font-size: 0.75rem; /* 12/16 */
+  line-height: 1.67;
+  text-decoration: underline;
+  text-underline-offset: 0.1875rem;
+  color: var(--meanings-card-text);
+}
+.examples-block__show,
+.word-of-the-day-block__show,
+.vocabulary-test-block__show,
+.get-started-block__show {
+  padding-block-start: 1rem; /* 16/16 */
+}
+.examples-block__show button {
+  font-weight: 700;
+  line-height: 1.38;
+  border-radius: 6.25rem; /* 100/16 */
+  padding-block: 0.75rem; /* 12/16 */
+  padding-inline: 1.375rem; /* 22/16 */
+  background: var(--swiper-arrow-bg);
+  transition: background 0.3s;
+}
+.fast {
+  padding-block: 1rem;
+  padding-inline: 1rem; /* 16/16 */
+  border-radius: 0.625rem;
+}
+.fast__title {
+  font-size: 1.375rem; /* 22/16 */
+  line-height: 1.36; /* 30/22 */
+  font-weight: 700;
+  margin-block-end: 1.875rem; /* 30/16 */
+}
+.fast__body {
+  display: grid;
+  grid-template-columns: 0.5rem 1fr;
+  column-gap: 1.25rem; /* 20/16 */
+}
+.speed-side {
+  position: relative;
+  block-size: calc(100% - 1.25rem);
+  align-self: center;
+  border-radius: 6.25rem;
+  background: linear-gradient(180deg, #d10000 0%, #ffb800 50%, #00a802 100%);
+}
+.speed-side__marker {
+  position: absolute;
+  inset-inline-start: -0.0625rem;
+  inset-block-start: 5.6875rem;
+  inline-size: 0.625rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--speed-mark-bg);
+  border: 0.125rem solid var(--speed-mark-border);
+}
+.fast__row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem; /* 16/16 */
+  padding-block: 1rem; /* 17/16 */
+}
+.fast__line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.625rem; /* 10/16 */
+}
+.fast__label {
+  font-size: 1.0625rem; /* 17/16 */
+  line-height: 1.29;
+  text-decoration: underline;
+  color: var(--meanings-title);
+}
+.fast__info {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem; /* 8/16 */
+  justify-self: flex-end;
+}
+.fast__rate {
+  padding-inline: 0.75rem; /* 12/16 */
+}
+
+.fast__arrow {
+  inline-size: 1rem;
+  block-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fast__arrow svg path {
+  fill: var(--fast-line);
+}
+.fast__bg {
+  block-size: 0.0625rem;
+  background: var(--fast-line);
+}
+
+.surface,
+.word-of-the-day {
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+}
+.surface__title {
+  font-size: 1.375rem; /* 22/16 */
+  line-height: 1.36; /* 30/22 */
+  color: var(--meanings-title);
+  font-weight: 500;
+  margin-block-end: 0.625rem; /* 10/16 */
+}
+.surface__list {
+  line-height: 1.5;
+  color: var(--meanings-card-text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* 4/16 */
+}
+.surface__list li {
+  position: relative;
+  padding-inline-start: 1.25rem; /* 20/16 */
+}
+.surface__list li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0.625rem;
+  inset-block-start: 0.6875rem;
+  inline-size: 0.25rem;
+  block-size: 0.25rem;
+  border-radius: 50%;
+  background: var(--primary-text-color);
+}
+.surface__list strong {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  color: var(--primary-text-color);
+}
+.etymology {
+  padding: 1.25rem; /* 20/16 */
+  border-radius: 0.625rem;
+}
+.etymology__title {
+  margin-block-end: 1.25rem; /* 20/16 */
+}
+.etymology__text {
+  line-height: 1.75;
+  color: var(--meanings-title);
+}
+.etymology__text p:not(:last-child) {
+  margin-block-end: 0.5rem; /* 8/16 */
+}
+@media (min-width: 767.98px) {
+  .home-hero__container {
+    /* display: grid; */
+    /*gap: 1.5rem; */ /* 24/16 */
+  }
+  .home-hero {
+    padding-block: 1.5rem 7.5rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .home-hero__container {
+    grid-template-columns: 341fr 773fr 341fr;
+    column-gap: clamp(
+      1.5rem,
+      5.255vw - 1.755rem,
+      3.5rem
+    ); /* 24 > 56.5 991 > 1600 */
+  }
+  .home-content__image {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .panel {
+    display: none;
+  }
+  .home-content__image {
+    margin-block-end: 1.5rem; /* 24/16 */
+  }
+  .home-content__image img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}
+@media (max-width: 991.98px) and (min-width: 767.98px) {
+  .home-hero__container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (max-width: 767.98px) {
+  .home-hero {
+    padding-block-end: 2rem; /* 32/16 */
+  }
+  .meanings {
+    display: none;
+  }
+}
+@media (max-width: 479.98px) {
+  .header-section__title {
+    font-size: 1.375rem; /* 22/16 */
+    line-height: 1.36; /* 30/22 */
+  }
+  .swiper-actions__action {
+    display: none;
+  }
+  .swiper-actions__body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    inline-size: 100%;
+  }
+  .swiper-actions__pagination {
+    justify-self: center;
+  }
+  .swiper-actions__arrow {
+    inline-size: 3rem; /* 48/16 */
+  }
+  .sounds {
+    column-gap: 0.625rem; /* 10/16 */
+  }
+  .home-content__section--margin-bottom,
+  .examples-block--margin-bottom,
+  .word-of-the-day-block--margin-bottom,
+  .my-words-block--margin-bottom,
+  .vocabulary-test-block--margin-bottom,
+  .get-started-block--margin-bottom,
+  .fast--margin-bottom,
+  .surface--margin-bottom,
+  .home-content__sentence,
+  .home-content__hero-swiper,
+  .home-content__my-words-block--margin-bottom {
+    margin-block-end: 1.5rem; /* 24/16 */
+  }
+  .hero-swiper__text,
+  .swiper-actions,
+  .word-of-the-day-block,
+  .my-words-block,
+  .vocabulary-test-block,
+  .get-started-block,
+  .examples-block,
+  .fast,
+  .surface {
+    padding-inline: 0.75rem; /* 12/16 */
+  }
+  .surface {
+    padding-block: 1rem; /* 16/16 */
+  }
+  .fast__title {
+    margin-block-end: 1rem; /* 16/16 */
+  }
+  .examples-block--mobile-hide .examples-block__info {
+    display: none;
+  }
+}
+@media (any-hover: hover) {
+  .panel__footer button:hover,
+  .header-section__learing:hover {
+    background: var(--primary-500);
+  }
+  .card-meanings__list li:hover {
+    background: var(--meanings-card-background-active);
+  }
+  .card-meanings__list li:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .swiper-actions__arrow:hover,
+  .examples-block__show button:hover {
+    background: var(--swiper-arrow-bg-hover);
+  }
+}
+
+/* NEWLY ADDED CSS BY MARIA */
+.home-content__section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-content__word-of-the-day-block {
+  display: flex;
+}
+
+.home-content__word-of-the-day-block .image-wrapper {
+  margin-top: -1.25rem;
+  margin-left: -1rem;
+  margin-bottom: -1rem;
+}
+
+.home-content__word-of-the-day-block .image-wrapper img {
+  border-radius: 0.5rem;
+}
+
+.home-content__word-of-the-day-block .content-wrapper {
+  padding-left: 1.25rem;
+}
+
+.home-content-row-1,
+.home-content-row-2,
+.home-content-row-3,
+.home-content-row-4 {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.home-content-row-1 .word-of-the-day {
+  width: calc((100% / 3) * 2);
+}
+
+.home-content-row-1 .home-content__my-words-block {
+  width: calc(100% / 3);
+}
+
+.home-content-row-2 .home-content__examples-block {
+  width: calc(100% / 3);
+}
+
+.home-content-row-2 .home-content__surface {
+  width: calc((100% / 3) * 2);
+}
+
+.home-content-row-3 .home-content__vocabulary-test-block {
+  width: calc(100% / 3);
+}
+
+.home-content-row-3 .home-content__vocabulary-test-block .image-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.25rem;
+}
+
+.home-content-row-3 .home-content__vocabulary-test-block p {
+  padding: 0.5rem 0;
+  font-size: 1.375rem;
+}
+
+.home-content-row-4 {
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.home-content-row-4 .home-content__get-started-block {
+  display: flex;
+  max-width: 70%;
+  padding-inline: 0rem;
+}
+
+.home-content__get-started-block .content {
+  padding: 3rem 1.5rem;
+}
+
+.home-content__get-started-block ul {
+  margin-left: 2rem;
+  margin-block-end: 2.5rem;
+}
+
+.home-content__get-started-block ul li {
+  list-style: inherit;
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.home-content__get-started-block .image-wrapper {
+  padding-left: 1.25rem;
+  margin-top: -3rem;
+  margin-bottom: -3rem;
+}

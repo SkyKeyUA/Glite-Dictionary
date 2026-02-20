@@ -1,6 +1,6 @@
 :root {
   /* fonts */
-  --font-family: 'Open Sans', sans-serif;
+  --font-family: "Open Sans", sans-serif;
 
   /* global */
 
@@ -32,7 +32,7 @@
   /* === Meanings === */
   --meanings-card-background: #2b2d30;
   --meanings-card-background-active: #36383d;
-  --meanings-title: #fbfcff;
+  --meanings-title: #165dfb;
   --meanings-card-text: #7e828e;
   --meanings-card-rate-bg: #ffffff0d;
   --meanings-plus-minus: #f5f5f5;
@@ -82,8 +82,8 @@
   --sun-color: #7e828e;
   --moon-color: #1d1b20;
 
-  --hover-icon: brightness(0) invert(28%) sepia(78%) saturate(3802%) hue-rotate(236deg)
-    brightness(98%) contrast(97%);
+  --hover-icon: brightness(0) invert(28%) sepia(78%) saturate(3802%)
+    hue-rotate(236deg) brightness(98%) contrast(97%);
   --img-filter: brightness(0) invert(1);
 
   --container-padding-inline: 1rem;
@@ -95,7 +95,7 @@
   --primary-background-color: #ebebed;
   --primary-text-color: #2b2d30;
 
-  --meanings-title: #2b2d30;
+  --meanings-title: #165dfb;
   --meanings-card-background: #f8f8f9;
   --swiper-arrow-bg: #0000000d;
   --swiper-arrow-bg-hover: #0000001a;
