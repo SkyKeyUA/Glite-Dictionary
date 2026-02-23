@@ -65,8 +65,9 @@
 
   /* === examples === */
 
-  --examples-tags-bg: #343538;
-  --examples-tags-color-active: #fbfcff;
+  --examples-tags-bg: #ffffff0d;
+  --examples-tags-bg-active: #ebebed;
+  --examples-tags-color-active: #1e1f22;
   --examples-border-bg: #fbfcff1a;
   --examples-image: #fafbff66;
   --examples-button: #0000000d;
@@ -106,9 +107,10 @@
 
   --swiper-bg: #f8f8f9;
 
-  --examples-tags-bg: #ebebed;
+  --examples-tags-bg: #0000000d;
+  --examples-tags-bg-active: #1e1f22;
   --examples-border-bg: #0000001a;
-  --examples-tags-color-active: #ebebed;
+  --examples-tags-color-active: #f8f8f9;
   --examples-image: #7e828e;
 
   --speed-mark-bg: #27282b;

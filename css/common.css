@@ -21,7 +21,7 @@
   border-radius: 0.75rem; /* 12/16 */
 }
 .rate {
-  padding-inline: 0.375rem; /* 6/16 */
+  padding-inline: 0.75rem; /* 12/16 */
 }
 .level {
   display: flex;

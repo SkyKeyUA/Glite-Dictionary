@@ -16,6 +16,13 @@ function documentActions(e) {
     html.classList.remove('light-mode');
     console.log('remove light-mode');
   }
+  if (targetElement.closest('.home-content__scroll')) {
+    const video = document.querySelector('.home-content__hero-swiper--scroll-video');
+    if (video) {
+      const y = video.getBoundingClientRect().top + window.pageYOffset - 120;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }
   if (window.innerWidth < 768) {
     if (
       targetElement.closest('.actions__btn--search') &&
