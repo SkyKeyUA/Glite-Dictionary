@@ -10,7 +10,6 @@
   background: var(--header-background);
 }
 .header__container {
-  padding-block: 1.5rem; /* 24/16 */
   column-gap: 1.5rem; /* 24/16 */
   display: grid;
   align-items: center;
@@ -112,6 +111,7 @@
 }
 @media (min-width: 767.98px) {
   .header__container {
+    padding-block: 1.5rem; /* 24/16 */
     grid-template-columns: auto 1fr auto;
   }
   .actions,
@@ -125,6 +125,7 @@
     display: none;
   }
   .header__container {
+    padding-block: 0.625rem; /* 10/16 */
     grid-template-columns: auto 1fr;
   }
   .actions__btn {
@@ -219,6 +220,6 @@
 }
 @media (max-width: 479.98px) {
   .header__logo {
-    inline-size: 8.25rem; /* 132/16 */
+    inline-size: 10.5rem; /* 168/16 */
   }
 }
