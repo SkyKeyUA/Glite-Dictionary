@@ -5,12 +5,6 @@ const searchHeaderInput = document.getElementById('header-search');
 const headerSearchListbox = document.querySelector('.search-header__pop-up');
 const headerSearchRemoveBtn = document.querySelector('.search-header__clean');
 
-if (headerSearchListbox) {
-  const focusContent = `
-
-`;
-}
-
 function windowLoad() {
   document.addEventListener('click', documentActions);
   html.classList.add('loaded');
@@ -42,8 +36,14 @@ function documentActions(e) {
   }
   if (
     targetElement.closest('.search-header__clean') ||
-    targetElement.closest('.search-header__close') ||
-    !targetElement.closest('.search-header__input')
+    targetElement.closest('.search-header__close')
+  ) {
+    searchHeaderInput.value = '';
+    headerSearchRemoveBtn.style.display = 'none';
+    searchHeaderBody?.classList.remove('active');
+  } else if (
+    !targetElement.closest('.search-header__input') &&
+    searchHeaderBody.classList.contains('active')
   ) {
     searchHeaderInput.value = '';
     headerSearchRemoveBtn.style.display = 'none';
