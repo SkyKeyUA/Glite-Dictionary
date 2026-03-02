@@ -46,6 +46,7 @@
   filter: brightness(0) invert(15%) sepia(8%) saturate(439%) hue-rotate(177deg) contrast(90%);
 }
 .light-mode .search-header__image--search img,
+.light-mode .search-header__close img,
 .light-mode .search-header__remove img,
 .light-mode .search-header__clean img {
   filter: brightness(0) invert(14%) sepia(7%) saturate(580%) hue-rotate(177deg) contrast(87%);
