@@ -1,5 +1,15 @@
 window.addEventListener('load', windowLoad);
 const html = document.documentElement;
+const searchHeaderBody = document.querySelector('.search-header__input');
+const searchHeaderInput = document.getElementById('header-search');
+const headerSearchListbox = document.querySelector('.search-header__pop-up');
+const headerSearchRemoveBtn = document.querySelector('.search-header__clean');
+
+if (headerSearchListbox) {
+  const focusContent = `
+
+`;
+}
 
 function windowLoad() {
   document.addEventListener('click', documentActions);
@@ -30,6 +40,15 @@ function documentActions(e) {
   if (targetElement.closest('.search-header__close')) {
     html.classList.remove('search-bar-open');
   }
+  if (
+    targetElement.closest('.search-header__clean') ||
+    targetElement.closest('.search-header__close') ||
+    !targetElement.closest('.search-header__input')
+  ) {
+    searchHeaderInput.value = '';
+    headerSearchRemoveBtn.style.display = 'none';
+    searchHeaderBody?.classList.remove('active');
+  }
 }
 if (document.querySelector('.hero-swiper')) {
   var swiper = new Swiper('.hero-swiper', {
@@ -44,3 +63,13 @@ if (document.querySelector('.hero-swiper')) {
     },
   });
 }
+
+searchHeaderInput?.addEventListener('input', (e) => {
+  if (searchHeaderInput.value.length > 0 && headerSearchRemoveBtn) {
+    headerSearchRemoveBtn.style.display = 'block';
+    searchHeaderBody?.classList.add('active');
+  } else {
+    headerSearchRemoveBtn.style.display = 'none';
+    searchHeaderBody?.classList.remove('active');
+  }
+});

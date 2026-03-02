@@ -42,19 +42,148 @@
   padding: 0.0938rem;
   cursor: pointer;
 }
+.light-mode .search-header__input label img {
+  filter: brightness(0) invert(15%) sepia(8%) saturate(439%) hue-rotate(177deg) contrast(90%);
+}
+.light-mode .search-header__image--search img,
+.light-mode .search-header__remove img,
+.light-mode .search-header__clean img {
+  filter: brightness(0) invert(14%) sepia(7%) saturate(580%) hue-rotate(177deg) contrast(87%);
+}
 .search-header__input input {
   border-radius: 1.5rem; /* 24/16 */
   inline-size: 100%;
   max-inline-size: 48.375rem; /* 774/16 */
   padding-block: 0.75rem; /* 12/16 */
-  padding-inline: 2.875rem 0.875rem;
-  background: var(--overlay-gray-10);
+  padding-inline: 2.875rem;
+  background: var(--meanings-card-background-active);
   color: var(--header-input-text);
   font-size: 1.0625rem; /* 17/16 */
   line-height: 1.29;
 }
+.search-header__input input:focus {
+  outline: none;
+}
 .search-header__input input::placeholder {
   color: var(--overlay-gray-60);
+}
+.search-header__pop-up {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 100%;
+  inline-size: 100%;
+  border-end-start-radius: 1.5rem;
+  border-end-end-radius: 1.5rem;
+  padding-block: 0.8125rem 0.625rem; /* 13/16 */
+  padding-inline: 1rem;
+  background: var(--meanings-card-background-active);
+  display: none;
+}
+.search-header__input.active input {
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+.search-header__input.active .search-header__pop-up {
+  display: block;
+}
+.search-header__label {
+  font-weight: 600;
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-500);
+  padding-block-start: 1.3125rem; /* 21/16 */
+  border-block-start: 0.0625rem solid var(--swiper-arrow-bg-hover);
+  display: none;
+}
+.search-header__item--meanings a {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  column-gap: 0.625rem;
+  padding-block: 0.5rem; /* 8/16 */
+}
+.search-header__item--default,
+.search-header__item--meanings {
+  border-block-start: 0.0625rem solid var(--swiper-arrow-bg-hover);
+}
+.search-header__listbox li:first-child {
+  border-block-start: 0.0625rem solid transparent;
+}
+.search-header__item--default a {
+  display: grid;
+  grid-template-columns: 4.625rem 1fr; /* 16/16 */
+  column-gap: 1rem; /* 16/16 */
+  padding-block: 1.5rem; /* 24/16 */
+  border-block: 0.0625rem solid transparent;
+}
+.search-header__item--default-smaller a {
+  grid-template-columns: 2.75rem 1fr;
+  column-gap: 0.75rem; /* 12/16 */
+  padding-block: 0.5rem; /* 8/16 */
+}
+.search-header__item--default .search-header__image {
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+}
+.search-header__item--default-smaller .search-header__image {
+  border-radius: 0.3125rem;
+}
+.search-header__item--default .search-header__body {
+  align-self: center;
+}
+.search-header__item--default .search-header__content,
+.search-header__item--meanings .search-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.5rem; /* 8/16 */
+}
+.search-header__item--default .search-header__title {
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+}
+.search-header__item--default-smaller .search-header__title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.44;
+}
+.search-header__info {
+  display: flex;
+  column-gap: 0.5rem; /* 8/16 */
+  align-items: center;
+}
+.search-header__item--default .search-header__text,
+.search-header__item--meanings .search-header__text,
+.search-header__meanings {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  color: var(--meanings-card-text);
+}
+.search-header__item--meanings {
+  display: grid;
+  grid-template-columns: 1fr 1.5rem;
+  column-gap: 0.625rem; /* 10/16 */
+}
+.search-header__item--meanings .search-header__image {
+  align-self: start;
+  block-size: 1.5rem;
+  inline-size: 1.5rem;
+  padding: 0.1875rem;
+  aspect-ratio: 1;
+}
+
+.search-header__item--meanings .search-header__title {
+  font-size: 1.125rem;
+  line-height: 1.44;
+}
+.search-header__remove {
+  transform: translateY(0.625rem);
+  block-size: 1.5rem; /* 24/16 */
+  inline-size: 1.5rem; /* 24/16 */
+  padding: 0.4063rem;
+  aspect-ratio: 1;
 }
 .actions {
   display: flex;
@@ -109,6 +238,25 @@
   block-size: 100%;
   object-fit: contain;
 }
+.search-header__input input::-webkit-search-cancel-button,
+.search-header__input input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.search-header__clean {
+  position: absolute;
+  inset-inline-end: 0.875rem;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  block-size: 1.5rem;
+  inline-size: 1.5rem;
+  aspect-ratio: 1;
+  padding: 0.4063rem;
+  display: none;
+}
+.search-header__item--full a {
+  grid-column: span 2;
+}
 @media (min-width: 767.98px) {
   .header__container {
     padding-block: 1.5rem; /* 24/16 */
@@ -121,6 +269,9 @@
   }
 }
 @media (max-width: 767.98px) {
+  .search-header__clean {
+    display: none !important;
+  }
   .dark-light-mode {
     display: none;
   }
@@ -183,8 +334,7 @@
     line-height: 1.5;
   }
 
-  .search-header__text,
-  .search-header__meanings {
+  .search-header__text {
     color: var(--footer-text-color);
     font-size: 0.75rem; /* 12/16 */
     line-height: 1.333;
@@ -197,10 +347,23 @@
     inline-size: 100%;
     block-size: 100%;
     background: var(--header-background);
-    padding-inline: 1rem; /* 16/16 */
-    padding-block: 4.25rem; /* 68/16 */
+    padding-inline: 0;
+    padding-block: 0;
     opacity: 0;
     visibility: hidden;
+  }
+  .search-header__input input {
+    border-radius: 0;
+    padding-block: 0.875rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.44;
+    padding-inline-end: 2.875rem; /* 46/16 */
+  }
+  .search-header__pop-up {
+    border-radius: 0;
+    inset-block-start: calc(100% + 0.0625rem);
+    padding-block-start: 0.625rem;
   }
   .search-bar-open .search-header {
     opacity: 1;
@@ -211,7 +374,7 @@
   }
   .search-header__close {
     position: absolute;
-    inset-block-start: 1.375rem; /* 22/16 */
+    inset-block-start: 0.875rem; /* 14/16 */
     inset-inline-end: 1rem; /* 16/16 */
     inline-size: 1.5rem; /* 24/16 */
     block-size: 1.5rem; /* 24/16 */
