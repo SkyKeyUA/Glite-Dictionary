@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Glite Dictionary">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>Glite Dictionary</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo header__logo--contain">
+					<a href="#">
+						<img src="img/logo.png" alt="Glite Dictionary">
+					</a>
+				</div>
+				<div class="header__search-header search-header">
+					<div class="search-header__body">
+						<div class="search-header__input search-header__input--contain">
+							<label for="header-search">
+								<img src="img/icons/search.svg" alt="Search Icon">
+							</label>
+							<input type="search" id="header-search" name="header-search"
+								placeholder="Search words or phrases..." />
+							<button type="button" class="search-header__clean">
+								<img src="img/icons/close.svg" alt="remove icon">
+							</button>
+							<div class="search-header__pop-up">
+								<div class="search-header__label">People also search for</div>
+								<ul id="header-search-listbox" class="search-header__listbox">
+									<li class="search-header__item search-header__item--meanings">
+										<a href="#">
+											<div class="search-header__image">
+												<img src="img/icons/timer.svg" alt="timer icon">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">running</h2>
+													<div class="search-header__meanings">
+														27 meanings
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>noun • verb</p>
+												</div>
+											</div>
+										</a>
+										<button type="button" aria-label="remove" class="search-header__remove">
+											<img src="img/icons/close.svg" alt="remove icon">
+										</button>
+									</li>
+									<li class="search-header__item search-header__item--meanings">
+										<a href="#">
+											<div class="search-header__image">
+												<img src="img/icons/timer.svg" alt="timer icon">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">runner</h2>
+													<div class="search-header__meanings">
+														27 meanings
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>noun</p>
+												</div>
+											</div>
+										</a>
+										<button type="button" aria-label="remove" class="search-header__remove">
+											<img src="img/icons/close.svg" alt="remove icon">
+										</button>
+									</li>
+									<li class="search-header__item search-header__item--meanings">
+										<a href="#">
+											<div class="search-header__image">
+												<img src="img/icons/timer.svg" alt="timer icon">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">runnesh</h2>
+													<div class="search-header__meanings">
+														27 meanings
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>noun</p>
+												</div>
+											</div>
+										</a>
+										<button type="button" aria-label="remove" class="search-header__remove">
+											<img src="img/icons/close.svg" alt="remove icon">
+										</button>
+									</li>
+									<li
+										class="search-header__item search-header__item--default search-header__item--default-smaller">
+										<a href="#">
+											<div class="search-header__image search-header__image--contain">
+												<img src="img/header-search/1.png" alt="runner">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">
+														run
+													</h2>
+													<div class="search-header__info">
+														<div class="search-header__rate rate">3/m
+														</div>
+														<div class="search-header__level level level--green">
+															<span class="level__dot level__dot--green"></span>
+															<span class="level__value">1.0</span>
+														</div>
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>verb</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="search-header__item search-header__item--full search-header__item--meanings">
+										<a href="#">
+											<div class="search-header__image search-header__image--search">
+												<img src="img/icons/header-search.svg" alt="search icon">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">runnesh</h2>
+													<div class="search-header__meanings">
+														27 meanings
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>noun</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="search-header__item search-header__item--default">
+										<a href="#">
+											<div class="search-header__image search-header__image--contain">
+												<img src="img/header-search/1.png" alt="runner">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">
+														run
+													</h2>
+													<div class="search-header__info">
+														<div class="search-header__rate rate">3/m
+														</div>
+														<div class="search-header__level level level--green">
+															<span class="level__dot level__dot--green"></span>
+															<span class="level__value">1.0</span>
+														</div>
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>verb</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="search-header__item search-header__item--default">
+										<a href="#">
+											<div class="search-header__image search-header__image--contain">
+												<img src="img/header-search/2.png" alt="runner">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">
+														zord
+													</h2>
+													<div class="search-header__info">
+														<div class="search-header__rate rate">3/m
+														</div>
+														<div class="search-header__level level level--green">
+															<span class="level__dot level__dot--green"></span>
+															<span class="level__value">1.0</span>
+														</div>
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>noun</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="search-header__item search-header__item--default">
+										<a href="#">
+											<div class="search-header__image search-header__image--contain">
+												<img src="img/header-search/3.png" alt="runner">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">
+														to cocainize
+													</h2>
+													<div class="search-header__info">
+														<div class="search-header__rate rate">3/m
+														</div>
+														<div class="search-header__level level level--green">
+															<span class="level__dot level__dot--green"></span>
+															<span class="level__value">1.0</span>
+														</div>
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>verb</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="search-header__item search-header__item--full search-header__item--meanings">
+										<a href="#">
+											<div class="search-header__image search-header__image--search">
+												<img src="img/icons/header-search.svg" alt="search icon">
+											</div>
+											<div class="search-header__body">
+												<div class="search-header__content">
+													<h2 class="search-header__title">runnesh</h2>
+													<div class="search-header__info">
+														<div class="search-header__rate rate">3/m
+														</div>
+														<div class="search-header__level level level--green">
+															<span class="level__dot level__dot--green"></span>
+															<span class="level__value">1.0</span>
+														</div>
+													</div>
+												</div>
+												<div class="search-header__text">
+													<p>noun</p>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button class="search-header__close" type="button" aria-label="close button">
+						<img src="img/icons/close.svg" alt="close icon">
+					</button>
+				</div>
+				<div class="header__actions actions actions--contain">
+					<button class="actions__btn actions__btn--search" type="button" aria-label="open/closed search input">
+						<img src="img/icons/search.svg" alt="Search Icon">
+					</button>
+					<button class="actions__btn actions__btn--menu" type="button" aria-label="open/closed menu">
+						<img src="img/icons/dots.svg" alt="menu">
+					</button>
+				</div>
+				<div class="header__dark-light-mode dark-light-mode">
+					<button type="button" aria-label="Light Mode" class="dark-light-mode__sun">
+						<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M7.33333 9.33333C7.88889 9.33333 8.36111 9.13889 8.75 8.75C9.13889 8.36111 9.33333 7.88889 9.33333 7.33333C9.33333 6.77778 9.13889 6.30556 8.75 5.91667C8.36111 5.52778 7.88889 5.33333 7.33333 5.33333C6.77778 5.33333 6.30556 5.52778 5.91667 5.91667C5.52778 6.30556 5.33333 6.77778 5.33333 7.33333C5.33333 7.88889 5.52778 8.36111 5.91667 8.75C6.30556 9.13889 6.77778 9.33333 7.33333 9.33333ZM7.33333 10.6667C6.41111 10.6667 5.625 10.3417 4.975 9.69167C4.325 9.04167 4 8.25556 4 7.33333C4 6.41111 4.325 5.625 4.975 4.975C5.625 4.325 6.41111 4 7.33333 4C8.25556 4 9.04167 4.325 9.69167 4.975C10.3417 5.625 10.6667 6.41111 10.6667 7.33333C10.6667 8.25556 10.3417 9.04167 9.69167 9.69167C9.04167 10.3417 8.25556 10.6667 7.33333 10.6667ZM2.66667 8H0V6.66667H2.66667V8ZM14.6667 8H12V6.66667H14.6667V8ZM6.66667 2.66667V0H8V2.66667H6.66667ZM6.66667 14.6667V12H8V14.6667H6.66667ZM3.6 4.5L1.91667 2.88333L2.86667 1.9L4.46667 3.56667L3.6 4.5ZM11.8 12.7667L10.1833 11.0833L11.0667 10.1667L12.75 11.7833L11.8 12.7667ZM10.1667 3.6L11.7833 1.91667L12.7667 2.86667L11.1 4.46667L10.1667 3.6ZM1.9 11.8L3.58333 10.1833L4.5 11.0667L2.88333 12.75L1.9 11.8Z" />
+						</svg>
+					</button>
+					<button type="button" aria-label="Dark Mode" class="dark-light-mode__moon">
+						<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M6 12C4.33333 12 2.91667 11.4167 1.75 10.25C0.583333 9.08333 0 7.66667 0 6C0 4.33333 0.583333 2.91667 1.75 1.75C2.91667 0.583333 4.33333 0 6 0C6.15556 0 6.30833 0.00555556 6.45833 0.0166667C6.60833 0.0277778 6.75556 0.0444444 6.9 0.0666667C6.44444 0.388889 6.08056 0.808333 5.80833 1.325C5.53611 1.84167 5.4 2.4 5.4 3C5.4 4 5.75 4.85 6.45 5.55C7.15 6.25 8 6.6 9 6.6C9.61111 6.6 10.1722 6.46389 10.6833 6.19167C11.1944 5.91945 11.6111 5.55556 11.9333 5.1C11.9556 5.24444 11.9722 5.39167 11.9833 5.54167C11.9944 5.69167 12 5.84444 12 6C12 7.66667 11.4167 9.08333 10.25 10.25C9.08333 11.4167 7.66667 12 6 12ZM6 10.6667C6.97778 10.6667 7.85556 10.3972 8.63333 9.85833C9.41111 9.31944 9.97778 8.61667 10.3333 7.75C10.1111 7.80556 9.88889 7.85 9.66667 7.88333C9.44444 7.91667 9.22222 7.93333 9 7.93333C7.63333 7.93333 6.46944 7.45278 5.50833 6.49167C4.54722 5.53056 4.06667 4.36667 4.06667 3C4.06667 2.77778 4.08333 2.55556 4.11667 2.33333C4.15 2.11111 4.19444 1.88889 4.25 1.66667C3.38333 2.02222 2.68056 2.58889 2.14167 3.36667C1.60278 4.14444 1.33333 5.02222 1.33333 6C1.33333 7.28889 1.78889 8.38889 2.7 9.3C3.61111 10.2111 4.71111 10.6667 6 10.6667Z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="main__hero hero">
+				<div class="hero__container">
+					<h1 class="hero__title">The Best English Dictionary</h1>
+					<div class="hero__text">
+						<p>The Ultimate Guide to 1.5 Million English Words and Phrases: Meanings, Usage & Examples</p>
+					</div>
+				</div>
+			</section>
+			<div class="main__cards-block cards-block">
+				<div class="cards-block__container">
+					<ul class="cards-block__list">
+						<li class="cards-block__card-item cards-block__card-item--first">
+							<div class="cards-block__image">
+								<img src="img/homepage/1.png" alt="image">
+							</div>
+							<div class="cards-block__content">
+								<div class="cards-block__label">WORD OF THE DAY</div>
+								<div class="cards-block__body">
+									<div class="cards-block__subtitle">disjuncture</div>
+									<div class="cards-block__info">
+										<div class="cards-block__rate rate">0.03/m
+											<div class="rate__tooltip">
+												<div class="rate__title">Frequency</div>
+												<div class="rate__text">
+													<p>3/m means an average American encounters this word 3 times per month (≈36
+														times
+														per year)</p>
+												</div>
+												<table class="rate__table">
+													<thead>
+														<tr>
+															<th></th>
+															<th>Per Million</th>
+															<th>Per Month</th>
+															<th>Per Year</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th>TV</th>
+															<td>120</td>
+															<td>3</td>
+															<td>18</td>
+														</tr>
+														<tr>
+															<th>YouTube</th>
+															<td>78</td>
+															<td>0.1</td>
+															<td>7</td>
+														</tr>
+														<tr>
+															<th>Social Media</th>
+															<td>12</td>
+															<td>0.03</td>
+															<td>3</td>
+														</tr>
+														<tr>
+															<th>Reading</th>
+															<td>39</td>
+															<td>0.03</td>
+															<td>5</td>
+														</tr>
+														<tr>
+															<th>Talking</th>
+															<td>2</td>
+															<td>0</td>
+															<td>0.3</td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr>
+															<th>Total</th>
+															<td>293</td>
+															<td class="rate__result">3.16</td>
+															<td>32</td>
+														</tr>
+													</tfoot>
+												</table>
+												<div class="rate__links">
+													<a href="#">more about our methodology</a>
+												</div>
+											</div>
+										</div>
+										<div class="cards-block__level level level--green">
+											<span class="level__dot level__dot--green"></span>
+											<span class="level__value">9.5</span>
+											<div class="level__tooltip">
+												<div class="level__title">Difficulty</div>
+												<div class="level__text">
+													<p>1.0 - everyone knows it. 9.9 - almost no one does.</p>
+												</div>
+												<div class="level__difficulty">
+													<div class="level__point">
+														<div class="level__arrow level__arrow--bottom">
+															<svg viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path
+																	d="M7.31613 5.9209L2.90805 1.25351C2.15241 0.453427 1.10051 9.77739e-06 7.09341e-07 8.63129e-06L20.4484 8.3919e-06C19.3479 1.01068e-05 18.296 0.453425 17.5403 1.25351L13.1322 5.92089C11.5537 7.59223 8.89462 7.59223 7.31613 5.9209Z" />
+															</svg>
+														</div>
+														<span class="level__dot level__dot--red"></span>8.3
+													</div>
+													<div class="level__line">
+														<div class="level__ticks">
+															<span class="level__tick"></span>
+															<span class="level__tick"></span>
+															<span class="level__tick"></span>
+															<span class="level__tick"></span>
+														</div>
+													</div>
+													<div class="level__numbers">
+														<span>1.0</span>
+														<span>4.0</span>
+														<span>7.0</span>
+														<span>9.9</span>
+													</div>
+													<div class="level__labels">
+														<span>Easy</span>
+														<span>Medium</span>
+														<span>Hard</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul class="cards-block__sounds sounds">
+									<li class="sounds__grammer">noun |</li>
+									<li class="sounds__item">
+										<button class="sounds__btn" type="button" aria-label="play the sound">
+											<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
+													fill="#7E828E" />
+												<path
+													d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
+													fill="#7E828E" />
+												<path
+													d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
+													fill="#7E828E" />
+											</svg>
+										</button>
+										<span class="sounds__language">US</span>
+										<span class="sounds__transcription">/dʒu:(ə)lri/</span>
+									</li>
+									<li class="sounds__item">
+										<button class="sounds__btn" type="button" aria-label="play the sound">
+											<svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M11 2.00382C11 0.308152 9.02229 -0.618168 7.71963 0.46738L3.63795 3.86878H2C0.89543 3.86878 0 4.76421 0 5.86878V9.86878C0 10.9734 0.89543 11.8688 2 11.8688H3.63795L7.71963 15.2702C9.02229 16.3557 11 15.4294 11 13.7337V2.00382ZM4.91832 5.40522L9 2.00382L9 13.7337L4.91832 10.3323C4.55889 10.0328 4.10582 9.86878 3.63795 9.86878H2V5.86878H3.63795C4.10582 5.86878 4.55889 5.70475 4.91832 5.40522Z"
+													fill="#7E828E" />
+												<path
+													d="M16.3394 1.40284C16.767 1.05333 17.397 1.11666 17.7465 1.54428C19.1547 3.26719 20.0001 5.47059 20.0001 7.86878C20.0001 10.267 19.1547 12.4704 17.7465 14.1933C17.397 14.6209 16.767 14.6842 16.3394 14.3347C15.9117 13.9852 15.8484 13.3552 16.1979 12.9276C17.3249 11.5488 18.0001 9.78898 18.0001 7.86878C18.0001 5.94858 17.3249 4.18878 16.1979 2.80996C15.8484 2.38234 15.9117 1.75235 16.3394 1.40284Z"
+													fill="#7E828E" />
+												<path
+													d="M13.567 4.22564C14.023 3.91405 14.6453 4.03111 14.9568 4.4871C15.615 5.45032 16 6.6161 16 7.86877C16 9.12144 15.615 10.2872 14.9568 11.2504C14.6453 11.7064 14.023 11.8235 13.567 11.5119C13.111 11.2003 12.994 10.5781 13.3056 10.1221C13.7438 9.48072 14 8.70617 14 7.86877C14 7.03136 13.7438 6.25682 13.3056 5.61547C12.994 5.15948 13.111 4.53723 13.567 4.22564Z"
+													fill="#7E828E" />
+											</svg>
+										</button>
+										<span class="sounds__language">UK</span>
+										<span class="sounds__transcription">/dʒu:(ə)lri/</span>
+									</li>
+								</ul>
+								<div class="cards-block__text">
+									<p>A gap between things that do not match</p>
+								</div>
+								<div class="cards-block__example">
+									Example: “Nations like Hungary, Germany, and others face disjunctures, breaks, and gaps that
+									must be ignored or
+									bridged.”
+									Example
+									llm_generated - Generated by LLM (78% guessable)
+								</div>
+								<div class="cards-block__links">
+									<a href="#">Try the App</a>
+								</div>
+							</div>
+						</li>
+						<li class="cards-block__card-item card-item">
+							<div class="card-item__label">MY WORDS</div>
+							<ul class="card-item__list">
+								<li>
+									<div class="card-item__header">
+										<div class="card-item__title">run around</div>
+										<div class="card-item__info">
+											<div class="card-item__rate rate">3/m
+												<div class="rate__tooltip">
+													<div class="rate__title">Frequency</div>
+													<div class="rate__text">
+														<p>3/m means an average American encounters this word 3 times per month (≈36
+															times
+															per year)</p>
+													</div>
+													<table class="rate__table">
+														<thead>
+															<tr>
+																<th></th>
+																<th>Per Million</th>
+																<th>Per Month</th>
+																<th>Per Year</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th>TV</th>
+																<td>120</td>
+																<td>3</td>
+																<td>18</td>
+															</tr>
+															<tr>
+																<th>YouTube</th>
+																<td>78</td>
+																<td>0.1</td>
+																<td>7</td>
+															</tr>
+															<tr>
+																<th>Social Media</th>
+																<td>12</td>
+																<td>0.03</td>
+																<td>3</td>
+															</tr>
+															<tr>
+																<th>Reading</th>
+																<td>39</td>
+																<td>0.03</td>
+																<td>5</td>
+															</tr>
+															<tr>
+																<th>Talking</th>
+																<td>2</td>
+																<td>0</td>
+																<td>0.3</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<th>Total</th>
+																<td>293</td>
+																<td class="rate__result">3.16</td>
+																<td>32</td>
+															</tr>
+														</tfoot>
+													</table>
+													<div class="rate__links">
+														<a href="#">more about our methodology</a>
+													</div>
+												</div>
+											</div>
+											<div class="card-item__level level level--green">
+												<span class="level__dot level__dot--green"></span>
+												<span class="level__value">1.0</span>
+												<div class="level__tooltip">
+													<div class="level__title">Difficulty</div>
+													<div class="level__text">
+														<p>1.0 - everyone knows it. 9.9 - almost no one does.</p>
+													</div>
+													<div class="level__difficulty">
+														<div class="level__point">
+															<div class="level__arrow level__arrow--bottom">
+																<svg viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path
+																		d="M7.31613 5.9209L2.90805 1.25351C2.15241 0.453427 1.10051 9.77739e-06 7.09341e-07 8.63129e-06L20.4484 8.3919e-06C19.3479 1.01068e-05 18.296 0.453425 17.5403 1.25351L13.1322 5.92089C11.5537 7.59223 8.89462 7.59223 7.31613 5.9209Z" />
+																</svg>
+															</div>
+															<span class="level__dot level__dot--red"></span>8.3
+														</div>
+														<div class="level__line">
+															<div class="level__ticks">
+																<span class="level__tick"></span>
+																<span class="level__tick"></span>
+																<span class="level__tick"></span>
+																<span class="level__tick"></span>
+															</div>
+														</div>
+														<div class="level__numbers">
+															<span>1.0</span>
+															<span>4.0</span>
+															<span>7.0</span>
+															<span>9.9</span>
+														</div>
+														<div class="level__labels">
+															<span>Easy</span>
+															<span>Medium</span>
+															<span>Hard</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-item__footer">
+										verb
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<ul class="footer__title">
+						<li>Glite Dictionary</li>
+						<li>Glite Vocabulary Test</li>
+						<li>Glite Image Test</li>
+					</ul>
+					<ul class="footer__list">
+						<li><a href="#">Help</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Copyright © Glite Tech Ltd, 2024</a></li>
+					</ul>
+				</div>
+				<div class="footer__image footer__image--contain">
+					<div class="footer__qr">
+						<img src="img/icons/qr.svg" alt="QR code">
+					</div>
+					<div class="footer__body">
+						<div class="footer__logo">
+							<img src="img/footer-logo.svg" alt="Glite logo">
+						</div>
+						<div class="footer__text">
+							<p>The English Learning App for Intermediate & Advanced Learners</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
