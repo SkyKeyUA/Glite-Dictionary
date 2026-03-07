@@ -89,6 +89,10 @@
 
   --container-padding-inline: 1rem;
   --global-max-width: 100rem; /* 1600/16 */
+
+  /* === border === */
+
+  --card-border-radius: 0.625rem;
 }
 .light-mode {
   --sun-color: #1d1b20;

@@ -68,6 +68,19 @@
   position: relative;
   cursor: pointer;
 }
+.rate::before,
+.level::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  inline-size: 100%;
+  block-size: 1rem;
+  background: transparent;
+  z-index: 2;
+  display: none;
+}
 .rate::after,
 .level::after {
   content: '';
@@ -79,13 +92,13 @@
   block-size: 1rem;
   background: var(--meanings-card-background-active);
   z-index: 2;
-  visibility: hidden;
-  transition: visibility 0.3s;
+  display: none;
 }
 .rate {
   padding-inline: 0.75rem; /* 12/16 */
 }
 .rate__tooltip {
+  display: none;
   padding: 1rem;
   position: absolute;
   inset-block-start: calc(100% + 1rem);
@@ -94,8 +107,6 @@
   background: var(--meanings-card-background-active);
   border-radius: 1rem; /* 16/16 */
   z-index: 2;
-  visibility: hidden;
-  transition: visibility 0.3s;
 }
 .rate__title {
   font-weight: 600;
@@ -188,6 +199,7 @@
   text-decoration: underline;
 }
 .level__tooltip {
+  display: none;
   color: var(--primary-text-color);
   position: absolute;
   inset-block-start: calc(100% + 1rem);
@@ -198,8 +210,6 @@
   border-radius: 1rem; /* 16/16 */
   text-align: center;
   z-index: 2;
-  visibility: hidden;
-  transition: visibility 0.3s;
 }
 .level__title {
   font-weight: 600;
@@ -269,7 +279,7 @@
 }
 .level__line {
   position: absolute;
-  inset-block-start: 33px;
+  inset-block-start: 2.0625rem;
   inset-inline-start: 0;
   display: flex;
   justify-content: center;
@@ -348,15 +358,15 @@
   inset-block-end: 0;
 }
 .level__labels span:nth-of-type(1) {
-  inset-inline-start: 43.82px;
+  inset-inline-start: 2.7388rem;
   color: var(--success-500);
 }
 .level__labels span:nth-of-type(2) {
-  inset-inline-start: 138px;
+  inset-inline-start: 8.625rem;
   color: var(--warning-500);
 }
 .level__labels span:nth-of-type(3) {
-  inset-inline-start: 253.19px;
+  inset-inline-start: 15.8244rem;
   color: var(--error-500);
 }
 .level {
@@ -382,6 +392,75 @@
 .level__dot--red {
   background: var(--error-500);
 }
+.sounds {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 1.25rem; /* 20/16 */
+  row-gap: 0.5rem; /* 8/16 */
+  color: var(--meanings-card-text);
+}
+.sounds__grammer {
+  font-weight: 600;
+  line-height: 1.63;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sounds__deliver--circle {
+  display: block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background-color: var(--meanings-card-text);
+}
+.sounds__deliver--v-line {
+  display: block;
+  width: 0.0625rem;
+  height: 1rem;
+  background-color: var(--meanings-card-text);
+}
+.sounds__item {
+  display: flex;
+  column-gap: 0.5rem; /* 8/16 */
+  align-items: center;
+}
+.sounds__language {
+  line-height: 1.63;
+  font-weight: 600;
+}
+.sounds__btn {
+  inline-size: 1.25rem; /* 20/16 */
+  flex-basis: 1.25rem; /* 20/16 */
+  flex-shrink: 0;
+  aspect-ratio: 20 / 16;
+}
+.sounds__btn svg {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+}
+.sounds__btn svg path {
+  fill: var(--meanings-card-text);
+  transition: fill 0.3s;
+}
+.sounds__transcription {
+  font-size: 0.875rem; /* 14/16 */
+  line-height: 1.43;
+}
+.button {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.38;
+  background: var(--primary-600);
+  color: var(--gray-50);
+  border-radius: 6.25rem;
+  padding-block: 0.75rem; /* 12/16 */
+  padding-inline: 1.375rem; /* 22/16 */
+  transition: background 0.3s;
+}
+
 @media (max-width: 479.98px) {
   .header-section__title {
     font-size: 1.5rem; /* 24/16 */
@@ -393,13 +472,18 @@
     line-height: 1.33;
     padding-block: 0.25rem; /* 4/16 */
   }
+  .button {
+    inline-size: 100%;
+  }
 }
 @media (min-width: 991.98px) {
   .level:hover .level__tooltip,
   .rate:hover .rate__tooltip,
   .rate:hover::after,
-  .level:hover::after {
-    visibility: visible;
+  .level:hover::after,
+  .rate::before,
+  .level::before {
+    display: block;
   }
 }
 @media (any-hover: hover) {
@@ -412,5 +496,8 @@
   }
   [class*='--img-hover']:active img {
     filter: none;
+  }
+  .button:hover {
+    background: var(--primary-500);
   }
 }

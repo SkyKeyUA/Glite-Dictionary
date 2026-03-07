@@ -33,7 +33,7 @@
 }
 .key-meanings__body li {
   display: grid;
-  column-gap: 8px; /* 8/16 */
+  column-gap: 0.5rem; /* 8/16 */
   row-gap: 0.25rem; /* 4/16 */
   grid-template-columns: auto 1fr auto;
   padding-block: 0.5rem; /* 8/16 */
