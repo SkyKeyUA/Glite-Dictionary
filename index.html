@@ -26,7 +26,8 @@
 					<div class="search-header__body">
 						<div class="search-header__input search-header__input--contain">
 							<label for="header-search">
-								<img src="img/icons/search.svg" alt="Search Icon">
+								<img class="header-search__search-icon" src="img/icons/search.svg" alt="Search Icon">
+								<img class="header-search__arrow-icon" src="img/icons/left-arrow.svg" alt="Search Icon">
 							</label>
 							<input type="search" id="header-search" name="header-search"
 								placeholder="Search words or phrases..." />
@@ -99,8 +100,7 @@
 											<img src="img/icons/close.svg" alt="remove icon">
 										</button>
 									</li>
-									<li
-										class="search-header__item search-header__item--default search-header__item--default-smaller">
+									<li class="search-header__item search-header__item--default">
 										<a href="#">
 											<div class="search-header__image search-header__image--contain">
 												<img src="img/header-search/1.png" alt="runner">
@@ -125,7 +125,8 @@
 											</div>
 										</a>
 									</li>
-									<li class="search-header__item search-header__item--full search-header__item--meanings">
+									<li
+										class="search-header__item search-header__item--full search-header__item--meanings">
 										<a href="#">
 											<div class="search-header__image search-header__image--search">
 												<img src="img/icons/header-search.svg" alt="search icon">
@@ -218,7 +219,8 @@
 											</div>
 										</a>
 									</li>
-									<li class="search-header__item search-header__item--full search-header__item--meanings">
+									<li
+										class="search-header__item search-header__item--full search-header__item--meanings">
 										<a href="#">
 											<div class="search-header__image search-header__image--search">
 												<img src="img/icons/header-search.svg" alt="search icon">
@@ -250,7 +252,8 @@
 					</button>
 				</div>
 				<div class="header__actions actions actions--contain">
-					<button class="actions__btn actions__btn--search" type="button" aria-label="open/closed search input">
+					<button class="actions__btn actions__btn--search" type="button"
+						aria-label="open/closed search input">
 						<img src="img/icons/search.svg" alt="Search Icon">
 					</button>
 					<button class="actions__btn actions__btn--menu" type="button" aria-label="open/closed menu">
@@ -284,10 +287,11 @@
 									<article>
 										<div class="card-meanings__header active">
 											<h2 class="card-meanings__title">Key Meanings</h2>
-											<button type="button" aria-label="Collapse"></button>
+											<button class="card-meanings__button" type="button"
+												aria-label="Collapse"></button>
 										</div>
 										<ul class="card-meanings__list">
-											<li>
+											<li class="card-meanings__item">
 												<a class="active" href="#">
 													<article>
 														<div class="card-meanings__image card-meanings__image--contain">
@@ -303,7 +307,8 @@
 														<div class="card-meanings__info">
 															<div class="card-meanings__rate">20/m</div>
 															<div class="card-meanings__level">
-																<span class="card-meanings__dot card-meanings__dot--green"></span>
+																<span
+																	class="card-meanings__dot card-meanings__dot--green"></span>
 																<span class="card-meanings__value">1.3</span>
 															</div>
 														</div>
@@ -350,7 +355,8 @@
 										<div class="rate__tooltip">
 											<div class="rate__title">Frequency</div>
 											<div class="rate__text">
-												<p>3/m means an average American encounters this word 3 times per month (≈36 times
+												<p>3/m means an average American encounters this word 3 times per month
+													(≈36 times
 													per year)</p>
 											</div>
 											<table class="rate__table">
@@ -419,7 +425,8 @@
 											<div class="level__difficulty">
 												<div class="level__point">
 													<div class="level__arrow level__arrow--bottom">
-														<svg viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<svg viewBox="0 0 21 8" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
 															<path
 																d="M7.31613 5.9209L2.90805 1.25351C2.15241 0.453427 1.10051 9.77739e-06 7.09341e-07 8.63129e-06L20.4484 8.3919e-06C19.3479 1.01068e-05 18.296 0.453425 17.5403 1.25351L13.1322 5.92089C11.5537 7.59223 8.89462 7.59223 7.31613 5.9209Z" />
 														</svg>
@@ -450,7 +457,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="home-content__sentence">Small decorative items like rings or necklaces that people wear
+							<div class="home-content__sentence">Small decorative items like rings or necklaces that
+								people wear
 								to look nice</div>
 							<div class="home-content__line">Regional Note: in UK, use <a href="#">jewellery</a></div>
 							<ul class="home-content__sounds sounds">
@@ -506,7 +514,8 @@
 							<button type="button" class="home-content__btn">Add for
 								Learning</button>
 						</section>
-						<div class="home-content__hero-swiper home-content__hero-swiper--scroll-video hero-swiper swiper">
+						<div
+							class="home-content__hero-swiper home-content__hero-swiper--scroll-video hero-swiper swiper">
 							<ul class="hero-swiper__swiper-wrapper swiper-wrapper">
 								<li class="hero-swiper__swiper-slide swiper-slide">
 									<div class="hero-swiper__iframe">
@@ -560,7 +569,8 @@
 								</div>
 								<div class="swiper-actions__action">
 									<div class="swiper-actions__text">Autoplay Next</div>
-									<button type="button" aria-label="Autoplay" class="swiper-actions__autoplay"></button>
+									<button type="button" aria-label="Autoplay"
+										class="swiper-actions__autoplay"></button>
 								</div>
 							</div>
 						</div>
@@ -577,7 +587,8 @@
 								<li>
 									<div class="examples-block__content">
 										<div class="examples-block__text">
-											<p>The antique store had a stunning collection of jewelry, featuring vintage rings and
+											<p>The antique store had a stunning collection of jewelry, featuring vintage
+												rings and
 												brooches.</p>
 										</div>
 									</div>
@@ -640,7 +651,8 @@
 											<div class="fast__rate rate">3/m<div class="rate__tooltip">
 													<div class="rate__title">Frequency</div>
 													<div class="rate__text">
-														<p>3/m means an average American encounters this word 3 times per month (≈36
+														<p>3/m means an average American encounters this word 3 times
+															per month (≈36
 															times
 															per year)</p>
 													</div>
@@ -710,7 +722,8 @@
 													<div class="level__difficulty">
 														<div class="level__point">
 															<div class="level__arrow level__arrow--bottom">
-																<svg viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<svg viewBox="0 0 21 8" fill="none"
+																	xmlns="http://www.w3.org/2000/svg">
 																	<path
 																		d="M7.31613 5.9209L2.90805 1.25351C2.15241 0.453427 1.10051 9.77739e-06 7.09341e-07 8.63129e-06L20.4484 8.3919e-06C19.3479 1.01068e-05 18.296 0.453425 17.5403 1.25351L13.1322 5.92089C11.5537 7.59223 8.89462 7.59223 7.31613 5.9209Z" />
 																</svg>
@@ -758,7 +771,8 @@
 											<div class="fast__rate rate">300/m<div class="rate__tooltip">
 													<div class="rate__title">Frequency</div>
 													<div class="rate__text">
-														<p>3/m means an average American encounters this word 3 times per month (≈36
+														<p>3/m means an average American encounters this word 3 times
+															per month (≈36
 															times
 															per year)</p>
 													</div>
@@ -828,7 +842,8 @@
 													<div class="level__difficulty">
 														<div class="level__point">
 															<div class="level__arrow level__arrow--bottom">
-																<svg viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<svg viewBox="0 0 21 8" fill="none"
+																	xmlns="http://www.w3.org/2000/svg">
 																	<path
 																		d="M7.31613 5.9209L2.90805 1.25351C2.15241 0.453427 1.10051 9.77739e-06 7.09341e-07 8.63129e-06L20.4484 8.3919e-06C19.3479 1.01068e-05 18.296 0.453425 17.5403 1.25351L13.1322 5.92089C11.5537 7.59223 8.89462 7.59223 7.31613 5.9209Z" />
 																</svg>
@@ -876,7 +891,8 @@
 											<div class="fast__rate rate">1/m<div class="rate__tooltip">
 													<div class="rate__title">Frequency</div>
 													<div class="rate__text">
-														<p>3/m means an average American encounters this word 3 times per month (≈36
+														<p>3/m means an average American encounters this word 3 times
+															per month (≈36
 															times
 															per year)</p>
 													</div>
@@ -946,7 +962,8 @@
 													<div class="level__difficulty">
 														<div class="level__point">
 															<div class="level__arrow level__arrow--bottom">
-																<svg viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<svg viewBox="0 0 21 8" fill="none"
+																	xmlns="http://www.w3.org/2000/svg">
 																	<path
 																		d="M7.31613 5.9209L2.90805 1.25351C2.15241 0.453427 1.10051 9.77739e-06 7.09341e-07 8.63129e-06L20.4484 8.3919e-06C19.3479 1.01068e-05 18.296 0.453425 17.5403 1.25351L13.1322 5.92089C11.5537 7.59223 8.89462 7.59223 7.31613 5.9209Z" />
 																</svg>
@@ -993,7 +1010,8 @@
 										<div class="synonyms__rate rate">70/m<div class="rate__tooltip">
 												<div class="rate__title">Frequency</div>
 												<div class="rate__text">
-													<p>3/m means an average American encounters this word 3 times per month
+													<p>3/m means an average American encounters this word 3 times per
+														month
 														(≈36 times
 														per year)</p>
 												</div>
@@ -1063,7 +1081,8 @@
 												<div class="level__difficulty">
 													<div class="level__point">
 														<div class="level__arrow level__arrow--bottom">
-															<svg viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<svg viewBox="0 0 21 8" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
 																<path
 																	d="M7.31613 5.9209L2.90805 1.25351C2.15241 0.453427 1.10051 9.77739e-06 7.09341e-07 8.63129e-06L20.4484 8.3919e-06C19.3479 1.01068e-05 18.296 0.453425 17.5403 1.25351L13.1322 5.92089C11.5537 7.59223 8.89462 7.59223 7.31613 5.9209Z" />
 															</svg>
@@ -1106,7 +1125,8 @@
 						<section class="home-content__surface surface surface--margin-bottom">
 							<h2 class="surface__title">Surface Forms</h2>
 							<ul class="surface__list">
-								<li><strong>jewelry</strong> singular (base) [american]</li>
+								<li><strong>jewelry</strong> singular (base) [american]
+								</li>
 								<li><strong>jewelries</strong> plural [american]</li>
 								<li><strong>jewellery</strong> singular [british</li>
 								<li><strong>jewelleries</strong> plural [british]</li>
@@ -1116,7 +1136,8 @@
 							<h2 class="etymology__title">Morphology</h2>
 							<div class="etymology__text">
 								<p>jewelry = <u>jewel</u> + <u>ry</u> <u>(transparent)</u> <br>
-									The noun is a straightforward collective/relational formation from 'jewel' meaning items made
+									The noun is a straightforward collective/relational formation from 'jewel' meaning
+									items made
 									of or consisting of
 									jewels.</p>
 							</div>
@@ -1124,7 +1145,8 @@
 						<section class="home-content__etymology etymology">
 							<h2 class="etymology__title">Etymology</h2>
 							<div class="etymology__text">
-								<p>jewelry comes from jewel, which once came from an old word meaning 'plaything' or 'delight'.
+								<p>jewelry comes from jewel, which once came from an old word meaning 'plaything' or
+									'delight'.
 									So jewelry means small,
 									decorative things you wear to look and feel special.</p>
 							</div>
@@ -1140,8 +1162,10 @@
 									<div class="words__label">My Words (28)</div>
 									<div class="words__arrow words__arrow--contain">
 										<svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M1 9.16667H17.3333M17.3333 9.16667L9.16667 1M17.3333 9.16667L9.16667 17.3333"
-												stroke="#EBEBED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path
+												d="M1 9.16667H17.3333M17.3333 9.16667L9.16667 1M17.3333 9.16667L9.16667 17.3333"
+												stroke="#EBEBED" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round" />
 										</svg>
 
 									</div>
